@@ -1,0 +1,291 @@
+@import 'reset.css';
+@import 'fonts.css';
+
+:root {
+    --pink: #FF9FA1;
+    --blue: #0029FF;
+    --grey: #C4C4C4;
+}
+.header__inf__inner {
+    display: none;
+}
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Source Code Pro',sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h2 {
+    font-family: 'Source Code Pro', sans-serif;
+    line-height: 100%;
+    text-transform: uppercase;
+    position: absolute;
+}
+h1 {
+    font-size: 3vw;
+    color: #fff; 
+}
+h2 {
+    font-size: 2vw;
+    color: var(--blue);
+    top: 39%;
+    left: 30%;
+    transform: matrix(1, -0.03, 0.04, 1, 0, 0);
+}
+
+
+/*Стили header'а*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 25px;
+}
+.header__logo__link,
+.header__inf__link {
+    color: var(--blue);
+    line-height: 21px;
+}
+.header__logo__link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vw;
+}
+.header__inf__link {
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    font-family: 'Fugue', sans-serif;
+}
+.header__inf__link:hover {
+ text-decoration: underline;
+}
+.header__inf__arrow {
+    margin-right: 3px;
+}
+
+
+/*Стили для блока с графическими элементами*/
+
+  /* Обощаю неоторые обзщие стили у элементов*/
+.wrapper > div {
+    position: fixed;
+    transition: all 1.5s ease;
+}
+.grey__square,
+.grey__circle,
+.grey__circle__two,
+.grey__title__rect,
+.grey__circle__three {
+    background-color: var(--grey);
+}
+.blue__rect,
+.blue__rect__two,
+.blue__adress__square,
+.blue__rect__three,
+.blue__rect__four {
+    background-color: var(--blue);
+}
+.pink__circle,
+.pink__rect,
+.pink__circle__two,
+.pink__rect__two {
+    background-color: var(--pink);
+}
+.grey__circle,
+.pink__circle,
+.grey__circle__two,
+.grey__circle__three {
+    border-radius: 50%;
+}
+ 
+ /*Задаю уникальные стили для элемнтов*/
+.wrapper {
+    margin: 5vh 10vw;
+    position: relative;
+}
+.bable {
+    transform: translate(31.5vw, -2.5vh);
+}
+.bable__img {
+    width: 13vw;
+    height: 11.5vw;
+}
+.candy {
+    transform: translate(-0.5vw, 7vh);
+}
+.blue__candy__img {
+    width: 20.5vw;
+    height: 21.5vw;
+}
+.pink__oval {
+    transform: translate(13vw, 5vh);
+}
+.pink-oval-img {
+    width: 12.5vw;
+    height: 15.5vw;
+}
+.grey__square {
+    width: 8vw;
+    height: 8vw;
+    transform: translate(26vw, 15vh);
+}
+.pink__title {
+    transform: translate(35.5vw, 16.5vh)  matrix(1, 0.03, -0.04, 1, 0, 0);;
+}
+.pink__title__text {
+    top: 35%;
+    left: 20%;
+}
+.blue__rect {
+    width: 2.3vw;
+    height: 7.7vw;
+    transform: translate(58vw, 11vh) rotate(-63.49deg);
+}
+.grey__circle {
+    transform: translate(62.7vw, 14vh);
+    width: 10vw;
+    height: 10vw;
+}
+.pink__circle {
+    transform: translate(5.5vw, 34vh);
+    width: 7vw;
+    height: 7vw;
+}
+.grey__circle__two {
+    transform: translate(20vw, 31vh);
+    width: 7.8vw;
+    height: 7.8vw;
+}
+.rounded {
+    transform: translate(29.5vw, 29vh);
+}
+.rounded__img {
+    width: 8.5vw;
+    height: 8.5vw;
+}
+.grey__title {
+    transform: translate(38.5vw, 33vh);
+}
+.grey__title__rect {
+    width: 28vw;
+    height: 7vw;
+}
+.grey__title__text {
+    top: 31%;
+    left: 26%;
+}
+.pink__rect {
+    transform: translate(67vw, 33vh);
+    width: 9vw;
+    height: 12vw;
+}
+.blue__rect__two {
+    transform: translate(1vw, 50vh) rotate(-26.86deg);
+    width: 3vw;
+    height: 8vw;
+}
+.grey__title__extra {
+    transform: translate(3.2vw, 45vh);
+}
+.blue__title {
+    transform: translate(37vw, 47vh);
+}
+.blue__title__text {
+    top: 27%;
+    left: 32%;
+}
+.pink__oval__two {
+    transform: translate(-2vw, 57vh);
+}
+.blue__adress {
+    transform: translate(12.5vw, 64vh);
+}
+.blue__adress__square {
+    width: 7.8vw;
+    height: 7.8vw;
+}
+.blue__adress__img {
+    position: absolute;
+    top: -38%;
+    left: 47%;
+}
+.blue__rect__three {
+    transform: translate(28vw, 60vh);
+    width: 3.5vw;
+    height: 8vw;
+}
+.pink__circle__two {
+    transform: translate(32.5vw, 60vh);
+    width: 9.5vw;
+    height: 9.5vw;
+}
+.candy__two {
+    transform: translate(42.5vw, 54vh);
+}
+.candy__two__img {
+    width: 29vw;
+}
+.grey__circle__three {
+    transform: translate(65.5vw, 66vh);
+    width: 5vw;
+    height: 5vw;
+}
+.blue__rect__four {
+    transform: translate(74vw, 56vh) rotate(25.44deg);
+    width: 4vw;
+    height: 5vw;
+}
+.pink__rect__two {
+    transform: translate(74vw, 61vh) rotate(-55deg);
+    width: 2.5vw;
+    height: 8vw;
+}
+
+
+/*Стили для футера*/
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.footer__inf {
+    margin: 2vw 1vw;
+}
+.footer__inf__block {
+    position: relative;
+}
+.footer__inf__hover {
+    width: 125px;
+}
+.footer__inf__block {
+    text-align: end;
+}
+.footer__inf__quest {
+    color: var(--blue);
+    font-family: 'Fugue', sans-serif;
+    font-size: 24px;
+    position: absolute;
+    top: 0.3vw;
+    right: 1vw;
+}
+.footer__inf__hover {
+    display: none;
+}
+.footer__inf:hover .footer__inf__hover{
+    display: block;
+}
+.footer__inf__hover__text {
+    color: var(--blue);
+}
+
