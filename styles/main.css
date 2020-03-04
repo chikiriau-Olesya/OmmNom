@@ -19,6 +19,8 @@ body {
     font-family: 'Source Code Pro',sans-serif;
     width: 100%;
     overflow-x: hidden;
+    background-image: url(../img/1024.png);
+    background-repeat: no-repeat;
 }
 a {
     text-decoration: none;
@@ -72,6 +74,35 @@ h2 {
 }
 .header__inf__arrow {
     margin-right: 3px;
+}
+.header__inf {
+    margin: 2vw 1vw;
+}
+.header__inf__block {
+    position: relative;
+}
+.header__inf__hover {
+    width: 125px;
+}
+.header__inf__block {
+    text-align: end;
+}
+.header__inf__quest {
+    color: var(--blue);
+    font-family: 'Fugue', sans-serif;
+    font-size: 24px;
+    position: absolute;
+    top: 0.3vw;
+    right: 1vw;
+}
+.header__inf__hover {
+    display: none;
+}
+.header__inf:hover .header__inf__hover{
+    display: block;
+}
+.header__inf__hover__text {
+    color: var(--blue);
 }
 
 
@@ -253,39 +284,91 @@ h2 {
 }
 
 
-/*Стили для футера*/
-.footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-.footer__inf {
-    margin: 2vw 1vw;
-}
-.footer__inf__block {
-    position: relative;
-}
-.footer__inf__hover {
-    width: 125px;
-}
-.footer__inf__block {
-    text-align: end;
-}
-.footer__inf__quest {
-    color: var(--blue);
-    font-family: 'Fugue', sans-serif;
-    font-size: 24px;
-    position: absolute;
-    top: 0.3vw;
-    right: 1vw;
-}
-.footer__inf__hover {
-    display: none;
-}
-.footer__inf:hover .footer__inf__hover{
-    display: block;
-}
-.footer__inf__hover__text {
-    color: var(--blue);
-}
 
+/*Media запросы*/
+
+@media (max-width: 1024px) {
+    .bable {
+        transform: translate(30.5vw, -5vh);
+    }
+    .bable__img {
+        width: 19vw;
+        height: 15vw;
+    }
+    .pink__oval {
+        transform: translate(8vw, 4vh)
+    }
+    .pink-oval-img {
+        width: 18vw;
+        height: 18vw;
+    }
+    .candy {
+        transform: translate(-5.5vw, 6vh);
+    }
+    .blue__candy__img {
+        width: 23.5vw;
+        height: 24.5vw;
+    }
+    .grey__square {
+        width: 10vw;
+        height: 9vw;
+        transform: translate(24.5vw, 13vh); 
+    }
+    .pink__title {
+        transform: translate(36.5vw, 13.5vh) matrix(1, 0.03, -0.04, 1, 0, 0);
+    }
+    .pink__title img {
+        width: 30vw;
+        height: 11vw;
+    }
+    .blue__rect {
+        width: 3vw;
+        height: 8vw;
+        transform: translate(63vw, 10vh) rotate(-63.49deg);
+    }
+    .grey__circle {
+        transform: translate(67.7vw, 13vh);
+        width: 11vw;
+        height: 11vw; 
+    }
+    .grey__circle__two {
+        transform: translate(18vw, 26vh);
+        width: 9vw;
+        height: 9vw;
+    }
+    .pink__circle {
+        transform: translate(1.5vw, 29vh);
+        width: 7vw;
+        height: 7vw;
+    }
+    .grey__title__extra {
+        transform: translate(-2.8vw, 37vh);
+    }
+    .grey__title__extra__img {
+        width: 39vw;
+    }
+    .rounded {
+        transform: translate(29.5vw, 25vh);
+    }
+    .rounded__img {
+        width: 9vw;
+        height: 9vw;
+    }
+    .grey__title {
+        transform: translate(39.5vw, 27vh);
+    } 
+    .grey__title__rect {
+        width: 32vw;
+        height: 9vw;
+    }
+    .pink__rect {
+        transform: translate(72.5vw, 27.5vh);
+        width: 10vw;
+        height: 16vw;
+    }
+    .blue__rect__two {
+        transform: translate(-4.5vw, 45vh) rotate(-26.86deg);
+        width: 3.5vw;
+        height: 9vw;
+    }
+}
