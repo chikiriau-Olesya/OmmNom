@@ -19,7 +19,7 @@ body {
     font-family: 'Source Code Pro',sans-serif;
     width: 100%;
     overflow-x: hidden;
-    background-image: url(../img/1024.png);
+    background-image: url(../img/768.png);
     background-repeat: no-repeat;
 }
 a {
@@ -111,7 +111,7 @@ h2 {
   /* Обощаю неоторые обзщие стили у элементов*/
 .wrapper > div {
     position: fixed;
-    transition: all 1.5s ease;
+   /* transition: all 1.5s ease;*/
 }
 .grey__square,
 .grey__circle,
@@ -440,4 +440,140 @@ h2 {
         width: 3vw;
         height: 11vw; 
     }
+
+    @media (max-width: 768px) {
+
+    h1 {
+        font-size: 5vw;
+    }
+        .bable {
+            transform: translate(40.5vw, -5.5vh) rotate(9deg);
+        }
+        .bable__img {
+            width: 29vw;
+            height: 23vw;
+        }
+        .grey__square {
+            width: 10vw;
+            height: 10vw;
+            transform: translate(34.5vw, 6.5vh) rotate(45deg);
+        }
+        .pink__oval {
+            transform: translate(12vw, 3vh) rotate(-13deg);
+        }
+        .pink__oval img {
+            width: 22vw;
+            height: 24vw;
+        }
+        .candy {
+            transform: translate(-6vw, 8vh) rotate(-7deg);
+        }
+        .blue__candy__img {
+            width: 37.5vw;
+            height: 37.5vw;
+        }
+        .pink__title {
+            transform: translate(29.5vw, 10vh) rotate(-13deg); 
+        }
+        .pink__title img {
+            width: 47vw;
+            height: 22vw;
+        }
+        .blue__rect {
+            width: 5vw;
+            height: 17vw;
+            transform: translate(67vw, 20.5vh) rotate(-26deg);
+        }
+        .grey__title {
+            transform: translate(24.5vw, 34vh) rotate(2deg); 
+        }
+        .grey__title__rect {
+            width: 42vw;
+            height: 13vw; 
+        }
+        .grey__circle {
+            transform: translate(52.7vw, 25vh);
+            width: 13vw;
+            height: 13vw;
+        }
+        .rounded {
+            transform: translate(34.5vw, 25vh) rotate(125deg); 
+        }
+        .rounded__img {
+            width: 12vw;
+            height: 13vw;
+        }
+        .pink__circle {
+            transform: translate(6.5vw, 27vh) rotate(11deg);
+            border-radius: 0%;
+            width: 5vw;
+            height: 16vw;
+            background-color: var(--grey);
+        }
+        h2 {
+            font-size: 3vw;
+        }
+        .grey__title__extra {
+            transform: translate(-6.8vw, 45.5vh);
+        }
+        .grey__title__extra__img {
+            width: 44vw;
+        }
+        .grey__circle__two {
+            transform: translate(11vw, 33.5vh);
+            width: 14vw;
+            height: 14vw; 
+        }
+        .blue__rect__two {
+            transform: translate(2.5vw, 39vh);
+            border-radius: 50%;
+            height: 10vw;
+            width: 10vw;
+            background-color: var(--pink);
+        }
+        .pink__rect {
+            transform: translate(67.5vw, 33.5vh); 
+        }
+        .blue__title {
+            transform: translate(39vw, 44.5vh) rotate(4deg);
+        }
+        .blue__adress {
+            transform: translate(-2vw, 57vh);
+        }
+        .blue__adress__square {
+            width: 15vw;
+            height: 14vw;
+        }
+        .blue__adress__img {
+            width: 19vw;
+        }
+        .pink__oval__two {
+            display: none;
+        }
+        .blue__rect__three {
+            transform: translate(23vw, 53.5vh);
+            height: 19vw;
+            width: 4.5vw;
+        }
+        .pink__circle__two {
+            transform: translate(28vw, 55vh);
+            width: 14.5vw;
+            height: 17.5vw;
+        }
+        .candy__two {
+            transform: translate(43.5vw, 53.5vh) rotate(-8deg);
+        }
+        .candy__two__img {
+            width: 42vw;
+        }
+        .blue__rect__four,
+        .pink__rect__two {
+            display: none;
+        }
+        .grey__circle__three {
+            transform: translate(73vw, 59vh);
+            width: 11vw;
+            height: 11vw;
+        }
+
 }
