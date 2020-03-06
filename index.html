@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OmmNom</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./js/anime.min.js">
+    <script src="./js/anime.min.js"></script>
     <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
 </head>
 <body>
@@ -70,7 +70,7 @@
         </div>
         <div class="blue__rect__three"></div>
         <div class="pink__circle__two"></div>
-        <div class="candy__two">
+        <div class="candy__two" onclick="">
             <img src="./img/blue_candy_down.svg" alt="oval blue candy" class="candy__two__img">
         </div>
         <div class="grey__circle__three"></div>
@@ -78,20 +78,21 @@
         <div class="pink__rect__two"></div>
     </div>
     <div class="modal">
-        <div class="modal__pic">
-            <img src="./img/modal-wind.png" alt="modal window with strange bird" class="modal__img">
-        </div>
-        <div class="modal__bable">
-            <img src="./img/bable__modal.svg" alt="bable for modal window" class="modal__bable__img">
-            <div class="modal__bable__content">
-                <button class="modal__bable__content__close">
-                    <img src="./img/close.svg" alt="close icon for modal window" class="modal__bable__close__img">
-                </button>
-                <p class="modal__bable__content__title">Ого,вы нашли скидку!</p>
-                <p class="modal__bable__content__text">
-                    <span>промокод на 20%:</span>
-                    <span>web-poster</span>
-                </p>
+        <div class="modal__inner">
+            <div class="modal__pic">
+                <img src="./img/modal-wind.png" alt="modal window with strange bird" class="modal__img">
+            </div>
+            <div class="modal__bable">
+                <img src="./img/bable__modal.svg" alt="bable for modal window" class="modal__bable__img">
+                <div class="modal__bable__content">
+                    <button class="modal__bable__content__close">
+                        <img src="./img/close.svg" alt="close icon for modal window" class="modal__bable__close__img">
+                    </button>
+                    <p class="modal__bable__content__title">Ого,вы нашли скидку!</p>
+                    <p class="modal__bable__content__text">
+                        <span>web-poster</span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

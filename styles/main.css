@@ -359,13 +359,28 @@ h2 {
     position: absolute;
     bottom: 0;
     right: 0;
+    display: none;
+}
+
+.modal__inner {
     display: flex;
     flex-direction: row-reverse;
-    display: none;
 }
 
 .modal__pic img {
     width: 26vw;
+}
+.modal__pic__anim {
+ animation: zoom-in;
+ animation-delay: 200ms;
+}
+@keyframes zoom-in {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
