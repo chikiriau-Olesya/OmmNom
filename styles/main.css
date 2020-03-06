@@ -5,22 +5,21 @@
     --pink: #FF9FA1;
     --blue: #0029FF;
     --grey: #C4C4C4;
-}
-
-.header__inf__inner {
-    display: none;
+    --horse-img: none;
 }
 
 * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image: var(--horse-img);
 }
 
 body {
     font-family: 'Source Code Pro',sans-serif;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 a {
@@ -354,6 +353,13 @@ h2 {
 /*Стили для особых элементов, которые появляются по нажатию и тд*/
 
 
+/*Styles for pink new circles*/ 
+.div__circle {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: var(--pink)
+}
   /*Стили для модально окна со скидкой*/
 .modal {
     position: absolute;
@@ -370,6 +376,7 @@ h2 {
 .modal__pic img {
     width: 26vw;
 }
+
 .modal__pic__anim {
  animation: zoom-in;
  animation-delay: 200ms;
@@ -431,6 +438,22 @@ h2 {
 }
 
 
+
+/*Комментаррии Жени*/
+
+.modal {
+
+}
+
+.modal.is-visible {
+    display: block;
+}
+
+.modal.is-visible .modal__pic {
+    transition-delay: 500ms;
+    opacity: 1;
+}
+/*не иннер а пик*/
 
 
 
