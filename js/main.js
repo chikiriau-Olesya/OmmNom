@@ -30,13 +30,31 @@ let btn = document.querySelector('.candy__two')
 let modal = document.querySelector('.modal')
 let close = document.querySelector('.modal__bable__content__close')
 btn.onclick = function() {
-    modal.classList.toggle('is-visible');
-    if (btn.onclick == true) {
-        
-    }
+    // modal.classList.toggle('is-visible');
+    modal.style.visibility = 'visible';
+    modal.classList.add('modal-animation-open')
+    // if (btn.onclick == true) {
+    //     let modalAnime = anime.timeline({
+    //         easing: 'linear'
+    //     })
+    //     modalAnime
+    //     .add ({
+    //         targets: '.modal__pic',
+    //         opacity: [0, 1],
+    //         autoplay: true
+    //     })
+    //     .add({
+    //         targets: '.modal__bable',
+    //         opacity: [0, 1],
+    //         delay: 1000,
+    //         autoplay: true
+    //     })
+    // }
 }
 close.onclick = () => {
-    modal.style.display = 'none';
+    // modal.style.display = 'none';
+    modal.style.visibility = 'hidden';
+    modal.classList.remove('modal-animation-open')
 }
 
 // Попытка сделать огромное количество розовых кругов

@@ -365,7 +365,23 @@ h2 {
     position: absolute;
     bottom: 0;
     right: 0;
-    display: none;
+    visibility: hidden;
+    transition: all .5ms linear;
+}
+
+.modal-animation-open{
+    animation: zoom-in .3s linear;
+}
+
+@keyframes zoom-in {
+    0%{
+        opacity: 0;
+        scale: 0;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 .modal__inner {
@@ -377,28 +393,14 @@ h2 {
     width: 26vw;
 }
 
-.modal__pic__anim {
- animation: zoom-in;
- animation-delay: 200ms;
-}
-@keyframes zoom-in {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-
 .modal__bable {
     position: relative;
     margin-right: -12%;
     margin-top: -9%;
 }
 
-.madal__bable__img {
-    width: 48vw;
+.modal__bable__img {
+    width: 42vw;
 }
 
 .modal__bable__content {
@@ -423,11 +425,11 @@ h2 {
 
 .modal__bable__content__title,
 .modal__bable__content__text span:last-child {
-    font-size: 24px;
+    font-size: 1.7vw;
 }
 
 .modal__bable__content__text {
-    font-size: 18px;
+    font-size: 1.3vw;
     margin-top: 18%;
     display: flex;
     flex-direction: column;
@@ -441,18 +443,18 @@ h2 {
 
 /*Комментаррии Жени*/
 
-.modal {
-
+/* .modal {
+    opacity: 0;
 }
 
 .modal.is-visible {
-    display: block;
+    opacity: 1;
 }
 
 .modal.is-visible .modal__pic {
     transition-delay: 500ms;
     opacity: 1;
-}
+} */
 /*не иннер а пик*/
 
 
@@ -653,6 +655,43 @@ h2 {
         width: 3vw;
         height: 11vw; 
     }
+
+
+    /*Стили появляющихся и особых элементов*/
+    .modal__pic img {
+        width: 35vw;
+    }
+
+    .modal__bable {
+        margin-right: -13%;
+        margin-top: -6%;
+    }
+
+    .modal__bable__img {
+        width: 52vw;
+    }
+
+    .modal__bable__content {
+        left: 17%;
+    }
+
+    .modal__bable__content__close {
+        right: -12%;
+        top: -26%;
+    }
+
+    .modal__bable__content__text {
+        margin-top: 7%;
+    }
+
+    .modal__bable__content__title,
+    .modal__bable__content__text span:last-child {
+        font-size: 2.4vw;
+    }
+
+    .modal__bable__content__text {
+        font-size: 1.8vw;
+    }
 }
 
 @media (max-width: 768px) {
@@ -829,6 +868,40 @@ h2 {
         transform: translate(73vw, 59vh);
         width: 11vw;
         height: 11vw;
+    }
+
+    /*Стили появляющихся и особых элементов*/
+    .modal__pic img {
+        width: 51vw;
+    }
+
+    .modal__bable {
+        margin-right: -19%;
+        margin-top: -7%;
+    }
+
+    .modal__bable__img {
+        width: 66vw;
+    }
+
+    .modal__bable__content {
+        left: 17%;
+    }
+
+    .modal__bable__content__close {
+        top: -55%;
+    }
+
+    .modal__bable__content__title {
+        margin-top: -5%;
+    }
+
+    .modal__bable__content__text {
+        margin-top: 7%;
+    }
+
+    .modal__bable__content__title {
+        font-size: 3.2vw;
     }
 }
 
@@ -1071,6 +1144,55 @@ h2 {
 
     .grey__circle__three {
         transform: translate(63.5vw, 64vh);
+    }
+
+
+    /**/
+    .modal {
+        overflow-y: hidden;
+        top: 0;
+        width: 100%;
+    }
+
+    .modal__inner {
+        flex-direction: column;
+        margin-top: -37%;
+        margin-right: -7%;
+    }
+
+    .modal__pic {
+        transform: rotate(255deg);
+    }
+
+    .modal__pic img {
+        width: 61vw;
+    }
+
+    .modal__bable {
+        background: var(--blue);
+        border-radius: 50%;
+        width: 65vw;
+        height: 50vw;
+        margin-left: 12%;
+        margin-top: 3%;
+    }
+    .modal__bable__content {
+        top: 45%;
+        left: 21%;
+    }
+
+    .modal__bable__img {
+        display: none;
+    }
+    .modal__bable__content__close {
+        top: 0;
+    }
+    .modal__bable__close__img {
+        width: 4.5vw;
+    }
+    .modal__bable__content__title,
+    .modal__bable__content__text {
+        margin: 0;
     }
 
 
