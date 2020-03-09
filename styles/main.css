@@ -5,6 +5,8 @@
     --pink: #FF9FA1;
     --blue: #0029FF;
     --grey: #C4C4C4;
+    --white: #ffffff;
+    --font: 'Source Code Pro',sans-serif;
     --horse-img: none;
 }
 
@@ -12,14 +14,15 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: var(--horse-img);
 }
 
 body {
-    font-family: 'Source Code Pro',sans-serif;
+    font-family: var(--font);
     width: 100%;
+    /* height: 110vh; */
     overflow-x: hidden;
     overflow-y: hidden;
+    background-color: var(--white);
 }
 
 a {
@@ -168,7 +171,7 @@ h2 {
  /*Задаю уникальные стили для элемнтов*/
 
 .wrapper {
-    margin: -4vh 10vw;
+    margin: 0vh 10vw;
     position: relative;
 }
 
@@ -181,6 +184,10 @@ h2 {
     height: 11.5vw;
 }
 
+.bable__img path {
+    fill: var(--blue)
+}
+
 .candy {
     transform: translate(-0.5vw, 7vh);
 }
@@ -190,8 +197,16 @@ h2 {
     height: 21.5vw;
 }
 
+.blue__candy__img path {
+    fill: var(--blue);
+}
+
 .pink__oval {
     transform: translate(13vw, 5vh);
+}
+
+.pink__oval svg ellipse {
+    fill: var(--pink);
 }
 
 .pink-oval-img {
@@ -207,6 +222,10 @@ h2 {
 
 .pink__title {
     transform: translate(35.5vw, 16.5vh)  matrix(1, 0.03, -0.04, 1, 0, 0);;
+}
+
+.pink__title__oval svg ellipse {
+    fill: var(--pink);
 }
 
 .pink__title__text {
@@ -246,6 +265,9 @@ h2 {
     width: 8.5vw;
     height: 8.5vw;
 }
+.rounded__img path {
+    stroke: var(--blue);
+}
 
 .grey__title {
     transform: translate(38.5vw, 33vh);
@@ -277,12 +299,21 @@ h2 {
     transform: translate(3.2vw, 45vh);
 }
 
+.grey__title__extra svg rect,
+.grey__title__extra svg ellipse {
+    fill: var(--grey);
+}
+
 .blue__title {
     transform: translate(37vw, 47vh);
 }
 
 .blue__title img {
     width: 22vw;
+}
+
+.blue__title svg path{
+    fill: var(--blue);
 }
 
 .blue__title__text {
@@ -292,6 +323,10 @@ h2 {
 
 .pink__oval__two {
     transform: translate(-2vw, 57vh);
+}
+
+.pink__oval__two svg ellipse {
+    fill: var(--pink);
 }
 
 .blue__adress {
@@ -329,6 +364,10 @@ h2 {
     width: 29vw;
 }
 
+.candy__two__img path {
+    fill: var(--blue);
+}
+
 .grey__circle__three {
     transform: translate(65.5vw, 66vh);
     width: 5vw;
@@ -353,13 +392,24 @@ h2 {
 /*Стили для особых элементов, которые появляются по нажатию и тд*/
 
 
-/*Styles for pink new circles*/ 
+ /*Styles for pink new circles*/ 
 .div__circle {
     width: 125px;
     height: 125px;
     border-radius: 50%;
-    background: var(--pink)
+    background: var(--pink);
+    border: solid 1px #ffff;
 }
+
+.img__new__candy {
+    width: 115px;
+    height: 115px;
+    border-radius: 100%;
+    border: transparent;
+    background-image: url(../img/new_candy.png);
+    background-repeat: no-repeat;
+}
+
   /*Стили для модально окна со скидкой*/
 .modal {
     position: absolute;
@@ -437,6 +487,12 @@ h2 {
 
 .modal__bable__content__text span:last-child {
     font-weight: bold;
+}
+
+/**/
+.letters {
+   visibility: hidden;
+   position: absolute;
 }
 
 
@@ -1147,7 +1203,9 @@ h2 {
     }
 
 
-    /**/
+    /*Стили для появляющихся элементов*/
+
+       /*Стили для модального окна*/
     .modal {
         overflow-y: hidden;
         top: 0;
@@ -1176,23 +1234,37 @@ h2 {
         margin-left: 12%;
         margin-top: 3%;
     }
+
     .modal__bable__content {
-        top: 45%;
-        left: 21%;
+        top: 39%;
+        left: 10%;
     }
 
     .modal__bable__img {
         display: none;
     }
+
     .modal__bable__content__close {
-        top: 0;
+        top: -61%;
+        left: 0;
     }
     .modal__bable__close__img {
         width: 4.5vw;
-    }
+    } 
+
     .modal__bable__content__title,
     .modal__bable__content__text {
         margin: 0;
+    }
+
+    .modal__bable__content__title,
+    .modal__bable__content__text span:last-child {
+        font-size: 4.2vw;
+    }
+
+    .modal__bable__content__text {
+        font-size: 3.5vw;
+        margin-top: 10%;
     }
 
 
