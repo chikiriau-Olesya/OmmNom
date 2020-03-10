@@ -19,7 +19,6 @@
 body {
     font-family: var(--font);
     width: 100%;
-    /* height: 110vh; */
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: var(--white);
@@ -180,8 +179,8 @@ h2 {
 }
 
 .bable__img {
-    width: 13vw;
-    height: 11.5vw;
+    width: 16vw;
+    height: 12.5vw;
 }
 
 .bable__img path {
@@ -193,8 +192,8 @@ h2 {
 }
 
 .blue__candy__img {
-    width: 20.5vw;
-    height: 21.5vw;
+    width: 22.5vw;
+    height: 22.5vw;
 }
 
 .blue__candy__img path {
@@ -202,7 +201,12 @@ h2 {
 }
 
 .pink__oval {
-    transform: translate(13vw, 5vh);
+    transform: translate(15.5vw, 10vh);
+}
+
+.pink__title svg {
+    width: 28vw;
+    height: 10vw;
 }
 
 .pink__oval svg ellipse {
@@ -215,13 +219,13 @@ h2 {
 }
 
 .grey__square {
-    width: 8vw;
-    height: 8vw;
+    width: 9vw;
+    height: 9vw;
     transform: translate(26vw, 15vh);
 }
 
 .pink__title {
-    transform: translate(35.5vw, 16.5vh)  matrix(1, 0.03, -0.04, 1, 0, 0);;
+    transform: translate(35vw, 16.5vh) matrix(1, 0.03, -0.04, 1, 0, 0);
 }
 
 .pink__title__oval svg ellipse {
@@ -235,30 +239,30 @@ h2 {
 
 .blue__rect {
     width: 2.3vw;
-    height: 7.7vw;
-    transform: translate(58vw, 11vh) rotate(-63.49deg);
+    height: 9.7vw;
+    transform: translate(58vw, 10vh) rotate(-63.49deg);
 }
 
 .grey__circle {
-    transform: translate(62.7vw, 14vh);
+    transform: translate(63vw, 17vh);
     width: 10vw;
     height: 10vw;
 }
 
 .pink__circle {
-    transform: translate(5.5vw, 34vh);
-    width: 7vw;
-    height: 7vw;
+    transform: translate(5.5vw, 32.5vh);
+    width: 8.5vw;
+    height: 8.5vw;
 }
 
 .grey__circle__two {
-    transform: translate(20vw, 31vh);
-    width: 7.8vw;
-    height: 7.8vw;
+    transform: translate(21vw, 29.5vh);
+    width: 9vw;
+    height: 10vw;
 }
 
 .rounded {
-    transform: translate(29.5vw, 29vh);
+    transform: translate(30vw, 30vh);
 }
 
 .rounded__img {
@@ -290,13 +294,17 @@ h2 {
 }
 
 .blue__rect__two {
-    transform: translate(1vw, 50vh) rotate(-26.86deg);
+    transform: translate(1vw, 49vh) rotate(-26.86deg);
     width: 3vw;
-    height: 8vw;
+    height: 9.5vw;
 }
 
 .grey__title__extra {
-    transform: translate(3.2vw, 45vh);
+    transform: translate(3.2vw, 44vh);
+}
+.grey__title__extra svg {
+    width: 31vw;
+    height: 9vw;
 }
 
 .grey__title__extra svg rect,
@@ -305,11 +313,12 @@ h2 {
 }
 
 .blue__title {
-    transform: translate(37vw, 47vh);
+    transform: translate(34.5vw, 45.5vh) rotate(-7deg);
 }
 
-.blue__title img {
-    width: 22vw;
+.blue__title svg {
+    width: 24vw;
+    height: 8vw;
 }
 
 .blue__title svg path{
@@ -322,7 +331,7 @@ h2 {
 }
 
 .pink__oval__two {
-    transform: translate(-2vw, 57vh);
+    transform: translate(0vw, 58vh) rotate(-24deg);
 }
 
 .pink__oval__two svg ellipse {
@@ -330,38 +339,49 @@ h2 {
 }
 
 .blue__adress {
-    transform: translate(12.5vw, 64vh);
+    transform: translate(11.5vw, 62vh);
 }
 
 .blue__adress__square {
-    width: 7.8vw;
-    height: 7.8vw;
+    width: 8.8vw;
+    height: 8.8vw;
 }
 
 .blue__adress__img {
     position: absolute;
-    top: -38%;
-    left: 47%;
+    top: -33%;
+    left: 56%;
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .blue__rect__three {
-    transform: translate(28vw, 60vh);
-    width: 3.5vw;
-    height: 8vw;
+    transform: translate(26vw, 57vh);
+    width: 4.5vw;
+    height: 12.5vw;
 }
 
 .pink__circle__two {
-    transform: translate(32.5vw, 60vh);
+    transform: translate(31vw, 59vh);
     width: 9.5vw;
-    height: 9.5vw;
+    height: 11.5vw;
 }
 
 .candy__two {
-    transform: translate(42.5vw, 54vh);
+    transform: translate(39.5vw, 53vh) rotate(-5deg);
 }
 
 .candy__two__img {
-    width: 29vw;
+    width: 33vw;
+    height: 13vw;
 }
 
 .candy__two__img path {
@@ -369,21 +389,22 @@ h2 {
 }
 
 .grey__circle__three {
-    transform: translate(65.5vw, 66vh);
-    width: 5vw;
-    height: 5vw;
+    transform: translate(62vw, 62vh);
+    width: 9vw;
+    height: 9.5vw;
 }
 
 .blue__rect__four {
-    transform: translate(74vw, 56vh) rotate(25.44deg);
-    width: 4vw;
-    height: 5vw;
+    transform: translate(72vw, 52.5vh) rotate(10deg);
+    width: 9vw;
+    height: 8vw;
+    border-radius: 50%;
 }
 
 .pink__rect__two {
-    transform: translate(74vw, 61vh) rotate(-55deg);
+    transform: translate(72.5vw, 61.5vh) rotate(-37deg);
     width: 2.5vw;
-    height: 8vw;
+    height: 10vw;
 }
 
 
@@ -519,9 +540,152 @@ h2 {
 
 
 /*Media запросы*/
+@media (max-width: 1440px) {
+    .bable {
+        transform: translate(31.5vw, -2.5vh);
+    }
+    
+    .bable__img {
+        width: 13vw;
+        height: 11.5vw;
+    }
+
+    .grey__square {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .pink__oval {
+        transform: translate(13vw, 5vh);
+    }
+
+    .pink__oval svg {
+        width: 12vw;
+        height: 15vw;
+    }
+
+    .blue__candy__img {
+        width: 20.5vw;
+        height: 21.5vw;
+    }
+
+    .grey__circle__two {
+        transform: translate(20vw, 31vh);
+        width: 7.8vw;
+        height: 7.8vw;
+    }
+
+    .pink__circle {
+        transform: translate(5.5vw, 34vh);
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .rounded {
+        transform: translate(29.5vw, 29vh);
+    }
+
+    .pink__title {
+        transform: translate(35.5vw, 16.5vh)  matrix(1, 0.03, -0.04, 1, 0, 0);;
+    }
+
+    .blue__rect {
+        width: 2.3vw;
+        height: 7.7vw;
+        transform: translate(58vw, 11vh) rotate(-63.49deg);
+    }
+
+    .grey__circle {
+        transform: translate(62.7vw, 14vh);
+    }
+
+    .grey__title__extra {
+        transform: translate(3.2vw, 45vh);
+    }
+
+    .grey__title__extra svg {
+        height: 8vw;
+    }
+
+    .blue__title {
+        transform: translate(37vw, 47vh);
+    }
+
+    .blue__title svg {
+        width: 22vw;
+        height: 7vw;
+    }
+
+    .pink__oval__two {
+        transform: translate(-2vw, 57vh);
+    }
+
+    .blue__rect__two {
+        transform: translate(1vw, 50vh) rotate(-26.86deg);
+        width: 3vw;
+        height: 8vw;
+    }
+
+    .blue__adress__square {
+        width: 7.8vw;
+        height: 7.8vw;
+    }
+
+    .blue__adress {
+        transform: translate(12.5vw, 64vh);
+    }
+
+    .blue__adress__img {
+        top: -38%;
+        left: 47%;
+    }
+
+    .blue__rect__three {
+        transform: translate(28vw, 60vh);
+        width: 3.5vw;
+        height: 8vw;
+    }
+
+    .pink__circle__two {
+        transform: translate(32.5vw, 60vh);
+        width: 9.5vw;
+        height: 9.5vw;
+    }
+
+    .candy__two {
+        transform: translate(42.5vw, 54vh);
+    }
+
+    .candy__two__img {
+        width: 29vw;
+    }
+
+    .grey__circle__three {
+        transform: translate(65.5vw, 66vh);
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .blue__rect__four {
+        transform: translate(74vw, 56vh) rotate(25.44deg);
+        width: 4vw;
+        height: 5vw;
+        border-radius: 0%;
+    }
+
+    .pink__rect__two {
+        transform: translate(74vw, 61vh) rotate(-55deg);
+        width: 2.5vw;
+        height: 8vw;
+    }
+
+    .pink__title svg {
+        width: 27vw;
+        height: 9.5vw;
+    }
+}
 
 @media (max-width: 1024px) {
-
     .header__logo__link {
         font-size: 2.5vw;
     }
@@ -541,16 +705,16 @@ h2 {
     }
 
     .bable {
-        transform: translate(30.5vw, -5vh);
+        transform: translate(30.5vw, -5.5vh);
     }
 
     .bable__img {
         width: 19vw;
-        height: 15vw;
+        height: 13vw;
     }
 
     .pink__oval {
-        transform: translate(8vw, 4vh)
+        transform: translate(12.5vw, 6.5vh);
     }
 
     .pink__oval img {
@@ -559,7 +723,7 @@ h2 {
     }
 
     .candy {
-        transform: translate(-6vw, 5vh);
+        transform: translate(-4vw, 5vh);
     }
 
     .blue__candy__img {
@@ -577,6 +741,10 @@ h2 {
         transform: translate(36.5vw, 13.5vh) matrix(1, 0.03, -0.04, 1, 0, 0);
     }
 
+    .pink__title svg {
+        width: 30vw;
+    }
+
     .pink__title img {
         width: 30vw;
         height: 11vw;
@@ -584,8 +752,8 @@ h2 {
 
     .blue__rect {
         width: 3vw;
-        height: 8vw;
-        transform: translate(63vw, 10vh) rotate(-63.49deg);
+        height: 9vw;
+        transform: translate(62.5vw, 8.5vh) rotate(-63.49deg);
     }
 
     .grey__circle {
@@ -595,7 +763,7 @@ h2 {
     }
 
     .grey__circle__two {
-        transform: translate(18vw, 25.5vh);
+        transform: translate(20vw, 25.5vh);
         width: 9vw;
         height: 9vw;
     }
@@ -605,11 +773,6 @@ h2 {
         width: 8vw;
         height: 8vw;
     }
-
-    .grey__title__extra {
-        transform: translate(-2.8vw, 36.5vh);
-    }
-
     .grey__title__extra__img {
         width: 39vw;
     }
@@ -639,13 +802,13 @@ h2 {
     }
 
     .blue__rect__two {
-        transform: translate(-4.5vw, 45vh) rotate(-26.86deg);
+        transform: translate(-2vw, 42.5vh) rotate(-47deg);
         width: 3.5vw;
         height: 9vw;
     }
 
     .blue__title {
-        transform: translate(37vw, 38.5vh);
+        transform: translate(34vw, 39.5vh);
     }
 
     .blue__title__img {
@@ -654,16 +817,16 @@ h2 {
     }
 
     .pink__oval__two {
-        transform: translate(-7vw, 48vh);
+        transform: translate(-4.5vw, 45.5vh);
     }
 
     .pink__oval__img {
-        width: 20vw;
+        width: 18vw;
         transform: rotate(-15deg);
     }
 
     .blue__adress {
-        transform: translate(10vw, 52vh);
+        transform: translate(11vw, 52vh);
     }
 
     .blue__adress__square {
@@ -672,8 +835,9 @@ h2 {
     }
 
     .blue__adress__img {
-        left: 36%;
-        width: 14vw;
+        left: 67%;
+        top: -31%;
+        width: 10vw;
     }
 
     .blue__rect__three {
@@ -688,7 +852,7 @@ h2 {
     }
 
     .candy__two {
-        transform: translate(43.5vw, 46.5vh);
+        transform: translate(41.5vw, 46.5vh) rotate(-2deg);
     }
 
     .candy__two__img {
@@ -696,20 +860,38 @@ h2 {
     }
 
     .grey__circle__three {
-        transform: translate(68.5vw, 56vh);
+        transform: translate(64.5vw, 54.5vh);
         width: 6vw;
-        height: 6vw; 
+        height: 7vw;
     }
 
     .blue__rect__four {
-        transform: translate(80vw, 49vh) rotate(25.44deg); 
-        height: 6vw;
+        transform: translate(74vw, 47vh) rotate(25.44deg);
+        height: 8vw;
+    }
+
+    .pink__rect {
+        transform: translate(72vw, 27.5vh);
+        width: 10vw;
+        height: 14vw;
     }
 
     .pink__rect__two {
-        transform: translate(79.5vw, 52vh) rotate(-58deg);
-        width: 3vw;
-        height: 11vw; 
+        transform: translate(73.5vw, 55vh) rotate(-55deg);
+    }
+
+    .grey__title__extra {
+        transform: translate(0.2vw, 36.5vh);
+    }
+
+    .grey__title__extra svg {
+        height: 10vw;
+        width: 32vw;
+    }
+
+    .blue__title svg {
+        width: 26vw;
+        height: 8vw;
     }
 
 
@@ -757,11 +939,20 @@ h2 {
     }
 
     .header {
-        padding: 29px 25px;
+        padding: 6px 25px;
+    }
+    
+    .header__logo__link {
+        font-size: 3.5vw;
     }
 
+    .wrapper {
+        margin: 14.5vh 10vw;
+    }
+
+
     .bable {
-        transform: translate(40.5vw, -5.5vh) rotate(9deg);
+        transform: translate(42.5vw, -7.5vh) rotate(9deg);
     }
 
     .bable__img {
@@ -770,22 +961,22 @@ h2 {
     }
 
     .grey__square {
-        width: 10vw;
-        height: 10vw;
-        transform: translate(34.5vw, 6.5vh) rotate(45deg);
+        width: 11vw;
+        height: 11vw;
+        transform: translate(35.5vw, 4.5vh) rotate(45deg);
     }
 
     .pink__oval {
-        transform: translate(12vw, 3vh) rotate(-13deg);
+        transform: translate(13vw, 1vh) rotate(-13deg);
     }
 
-    .pink__oval img {
-        width: 22vw;
+    .pink__oval svg {
+        width: 21vw;
         height: 24vw;
     }
 
     .candy {
-        transform: translate(-6vw, 8vh) rotate(-7deg);
+        transform: translate(-6vw, 6vh) rotate(-9deg);
     }
 
     .blue__candy__img {
@@ -794,10 +985,10 @@ h2 {
     }
 
     .pink__title {
-        transform: translate(29.5vw, 10vh) rotate(-13deg); 
+        transform: translate(29.5vw, 9vh) rotate(-13deg)
     }
 
-    .pink__title img {
+    .pink__title svg {
         width: 47vw;
         height: 22vw;
     }
@@ -805,11 +996,11 @@ h2 {
     .blue__rect {
         width: 5vw;
         height: 17vw;
-        transform: translate(67vw, 20.5vh) rotate(-26deg);
+        transform: translate(68vw, 19.5vh) rotate(-28deg);
     }
 
     .grey__title {
-        transform: translate(24.5vw, 34vh) rotate(2deg); 
+        transform: translate(25.5vw, 33vh) rotate(2deg); 
     }
 
     .grey__title__rect {
@@ -818,13 +1009,13 @@ h2 {
     }
 
     .grey__circle {
-        transform: translate(52.7vw, 25vh);
+        transform: translate(54.7vw, 23vh);
         width: 13vw;
         height: 13vw;
     }
 
     .rounded {
-        transform: translate(34.5vw, 25vh) rotate(125deg); 
+        transform: translate(34.5vw, 24vh) rotate(125deg); 
     }
 
     .rounded__img {
@@ -833,7 +1024,7 @@ h2 {
     }
 
     .pink__circle {
-        transform: translate(6.5vw, 27vh) rotate(11deg);
+        transform: translate(6.5vw, 25vh) rotate(11deg);
         border-radius: 0%;
         width: 5vw;
         height: 16vw;
@@ -845,11 +1036,12 @@ h2 {
     }
 
     .grey__title__extra {
-        transform: translate(-6.8vw, 45.5vh);
+        transform: translate(-4.8vw, 43.5vh);
     }
 
-    .blue__title img {
-        width: 43vw;
+    .grey__title__extra svg {
+        height: 12vw;
+        width: 44vw;
     }
 
     .grey__title__extra__img {
@@ -857,13 +1049,13 @@ h2 {
     }
 
     .grey__circle__two {
-        transform: translate(11vw, 33.5vh);
+        transform: translate(11vw, 31.5vh);
         width: 14vw;
         height: 14vw; 
     }
 
     .blue__rect__two {
-        transform: translate(2.5vw, 39vh);
+        transform: translate(2.5vw, 37vh);
         border-radius: 50%;
         height: 10vw;
         width: 10vw;
@@ -871,15 +1063,22 @@ h2 {
     }
 
     .pink__rect {
-        transform: translate(67.5vw, 33.5vh); 
+        transform: translate(68.5vw, 32.5vh);
+        width: 12vw;
+        height: 15vw;
     }
 
     .blue__title {
-        transform: translate(39vw, 44.5vh) rotate(4deg);
+        transform: translate(40vw, 42.5vh) rotate(6deg);;
+    }
+
+    .blue__title svg {
+        width: 36vw;
+        height: 12vw;
     }
 
     .blue__adress {
-        transform: translate(-2vw, 57vh);
+        transform: translate(-3vw, 55vh);
     }
 
     .blue__adress__square {
@@ -888,7 +1087,7 @@ h2 {
     }
 
     .blue__adress__img {
-        width: 19vw;
+        width: 17vw;
     }
 
     .pink__oval__two {
@@ -896,23 +1095,24 @@ h2 {
     }
 
     .blue__rect__three {
-        transform: translate(23vw, 53.5vh);
-        height: 19vw;
+        transform: translate(24vw, 51.5vh);
+        height: 20vw;
         width: 4.5vw;
     }
 
     .pink__circle__two {
-        transform: translate(28vw, 55vh);
-        width: 14.5vw;
+        transform: translate(29vw, 53vh);
+        width: 16.5vw;
         height: 17.5vw;
     }
 
     .candy__two {
-        transform: translate(43.5vw, 53.5vh) rotate(-8deg);
+        transform: translate(43.5vw, 50.5vh) rotate(-14deg);
     }
 
     .candy__two__img {
         width: 42vw;
+        height: 17vw;
     }
 
     .blue__rect__four,
@@ -921,9 +1121,9 @@ h2 {
     }
 
     .grey__circle__three {
-        transform: translate(73vw, 59vh);
-        width: 11vw;
-        height: 11vw;
+        transform: translate(70vw, 57vh);
+        width: 13vw;
+        height: 13vw;
     }
 
     /*Стили появляющихся и особых элементов*/
@@ -999,6 +1199,10 @@ h2 {
         width: 9vw;
     }
 
+    .wrapper {
+        margin: 9.5vh 10vw;
+    }
+
     .bable {
         transform: translate(40.5vw, -0.5vh) rotate(9deg); 
     }
@@ -1029,11 +1233,11 @@ h2 {
     } 
 
     .pink__title {
-        transform: translate(21.5vw, 15vh) rotate(-16deg);
+        transform: translate(21.5vw, 15vh) rotate(-14deg);
     }
 
-    .pink__title img {
-        width: 54vw;
+    .pink__title svg {
+        width: 56vw;
     }
 
     .grey__circle {
@@ -1041,7 +1245,7 @@ h2 {
     }
 
     .rounded {
-        transform: translate(0.5vw, 28.5vh) rotate(335deg);
+        transform: translate(0.5vw, 27.5vh) rotate(335deg);
     }
 
     .rounded__img {
@@ -1050,7 +1254,7 @@ h2 {
     }
 
     .grey__title {
-        transform: translate(16.5vw, 29vh) rotate(2deg); 
+        transform: translate(16.5vw, 28vh) rotate(2deg); 
     }
 
     .grey__title__rect {
@@ -1058,19 +1262,24 @@ h2 {
     }
 
     .pink__rect {
-        transform: translate(69.5vw, 30.5vh);
+        transform: translate(69.5vw, 29.5vh);
         height: 22vw;
     }
 
     .blue__rect__two {
-        transform: translate(0.5vw, 38vh) rotate(-8deg);
+        transform: translate(0.5vw, 36.5vh) rotate(-8deg);
         border-radius: 0%;
         height: 21vw;
         width: 21vw;
     }
 
     .blue__title {
-        transform: translate(24vw, 39.5vh) rotate(13deg);
+        transform: translate(23vw, 38.5vh) rotate(11deg);
+    }
+
+    .blue__title svg {
+        width: 52vw;
+        height: 16vw;
     }
 
     .blue__title__text {
@@ -1083,7 +1292,12 @@ h2 {
     }
 
     .grey__title__extra {
-        transform: translate(-2.8vw, 49.5vh);
+        transform: translate(-2.8vw, 47.5vh);
+    }
+
+    .grey__title__extra svg {
+        height: 18vw;
+        width: 59vw;
     }
 
     .grey__title__extra__img {
@@ -1091,7 +1305,7 @@ h2 {
     }
 
     .blue__adress {
-        transform: translate(0vw, 66vh);
+        transform: translate(0vw, 63vh);
     }
 
     .blue__adress__square {
@@ -1102,27 +1316,100 @@ h2 {
     .blue__adress__img {
         width: 23vw;
         top: -62%;
+        left: 36%;
     }
 
     .pink__circle__two {
-        transform: translate(31vw, 58.5vh);
+        transform: translate(31vw, 56.5vh);
         width: 15.5vw;
         height: 32.5vw;
     }
 
     .candy__two {
-        transform: translate(39vw, 57.5vh) rotate(-49deg);
+        transform: translate(38.5vw, 55.5vh) rotate(-49deg);
     }
 
     .candy__two__img {
         width: 49vw;
+        height: 22vw;
     }
 
     .grey__circle__three {
-        transform: translate(63.5vw, 67.5vh);
+        transform: translate(63.5vw, 64.5vh);
         width: 18vw;
         height: 17vw;
     }
+
+    .modal__pic img {
+        width: 64vw;
+    }
+
+
+    
+    /*Стили для появляющихся элементов*/
+
+       /*Стили для модального окна*/
+       .modal {
+        overflow-y: hidden;
+        top: 0;
+        width: 100%;
+    }
+
+    .modal__inner {
+        flex-direction: column;
+        margin-top: -37%;
+        margin-right: -7%;
+    }
+
+    .modal__pic {
+        transform: rotate(255deg);
+    }
+
+    .modal__pic img {
+        width: 61vw;
+    }
+
+    .modal__bable {
+        background: var(--blue);
+        border-radius: 50%;
+        width: 65vw;
+        height: 50vw;
+        margin-left: 12%;
+        margin-top: 3%;
+    }
+
+    .modal__bable__content {
+        top: 39%;
+        left: 10%;
+    }
+
+    .modal__bable__img {
+        display: none;
+    }
+
+    .modal__bable__content__close {
+        top: -61%;
+        left: 0;
+    }
+    .modal__bable__close__img {
+        width: 4.5vw;
+    } 
+
+    .modal__bable__content__title,
+    .modal__bable__content__text {
+        margin: 0;
+    }
+
+    .modal__bable__content__title,
+    .modal__bable__content__text span:last-child {
+        font-size: 4.2vw;
+    }
+
+    .modal__bable__content__text {
+        font-size: 3.5vw;
+        margin-top: 10%;
+    }
+
 }
 
 @media (max-width: 360px) {
@@ -1136,23 +1423,34 @@ h2 {
     }
 
     .bable {
-        transform: translate(40.5vw, -1.5vh) rotate(9deg);
+        transform: translate(40.5vw, -5.5vh) rotate(9deg);
+    }
+
+    .candy {
+        transform: translate(-1.5vw, -10.5vh) rotate(-8deg);
     }
     
     .pink__title {
-        transform: translate(20.5vw, 14vh) rotate(-16deg);
+        transform: translate(20.5vw, 9vh) rotate(-16deg);
     }
 
-    .pink__title_-img {
+    .pink__title svg {
+        width: 56vw;
+        height: 23vw;
+    }
+
+    .pink__title__img {
         width: 27vw;
     }
 
     .grey__square {
-        transform: translate(7.5vw, 12vh) rotate(12deg);
+        width: 16vw;
+        height: 27vw;
+        transform: translate(7.5vw, 6vh) rotate(12deg);
     }
 
     .grey__title {
-        transform: translate(16.5vw, 27vh) rotate(2deg);
+        transform: translate(16.5vw, 22.5vh) rotate(2deg);
     }
 
     .grey__title__rect {
@@ -1160,46 +1458,68 @@ h2 {
     }
 
     .grey__circle {
-        transform: translate(66.7vw, 21vh);
+        width: 15vw;
+        height: 15vw;
+        transform: translate(66.7vw, 15.5vh);
     }
 
     .rounded {
-        transform: translate(0.5vw, 26.5vh) rotate(335deg);
+        transform: translate(0.5vw, 21.5vh) rotate(335deg);
     }
 
     .pink__rect {
-        transform: translate(69.5vw, 28.5vh);
+        transform: translate(69.5vw, 24vh);
         height: 23vw;
         width: 11vw;
     }
 
     .blue__rect__two {
-        transform: translate(-0.5vw, 36vh) rotate(-8deg);
+        transform: translate(-0.5vw, 31vh) rotate(-8deg);
     }
 
     .blue__title {
-        transform: translate(24vw, 37.5vh) rotate(13deg);
+        transform: translate(23vw, 33.5vh) rotate(11deg);
+    }
+
+    .blue__title svg {
+        width: 52vw;
+        height: 17vw;
     }
 
     .grey__title__extra {
-        transform: translate(-4.8vw, 47.5vh);
+        transform: translate(-3.8vw, 43.5vh);
+    }
+
+    .grey__title__extra svg {
+        height: 16vw;
+        width: 61vw;
     }
 
     .blue__adress {
-        transform: translate(-0.5vw, 63vh);
+        transform: translate(-0.5vw, 58vh);
     }
 
     .pink__circle__two {
-        transform: translate(30vw, 56vh);
+        transform: translate(30vw, 52vh);
         width: 16.5vw;
     }
 
     .candy__two {
-        transform: translate(39vw, 54.5vh) rotate(-49deg);
+        transform: translate(39vw, 50.5vh) rotate(-49deg);
+    }
+
+    .candy__two__img {
+        height: 22vw;
     }
 
     .grey__circle__three {
-        transform: translate(63.5vw, 64vh);
+        transform: translate(63.5vw, 60vh);
+    }
+
+    .blue__adress__img {
+        width: 21vw;
+        top: -49%;
+        left: 44%;
     }
 
 
@@ -1279,6 +1599,21 @@ h2 {
 }
 
 @media (max-width: 320px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    .wrapper {
+        margin: 9.5vh 10vw;
+    }
+
+    .rounded {
+        transform: translate(-0.5vw, 27.5vh) rotate(335deg);
+    }
+
+    .rounded__img {
+        height: 17vw;
+    }
 
     .bable {
         transform: translate(35.5vw, -2.5vh) rotate(9deg);
@@ -1294,12 +1629,21 @@ h2 {
         height: 27vw;
     }
 
+    .pink__rect {
+        transform: translate(69.5vw, 29vh);
+    }
+
     .pink__title {
         transform: translate(18.5vw, 12vh) rotate(-16deg);
     }
 
-    .pink__title img {
+    .pink__title svg {
         width: 58vw;
+        height: 23vw;
+    }
+
+    .blue__title {
+        transform: translate(23vw, 37.5vh) rotate(15deg);
     }
 
     .grey__circle {
@@ -1308,6 +1652,30 @@ h2 {
 
     .grey__title {
         transform: translate(16.5vw, 25.2vh) rotate(2deg);
+    }
+
+    .blue__rect__two {
+        transform: translate(-0.5vw, 37vh) rotate(-8deg);
+    }
+
+    .blue__adress {
+        transform: translate(-1.5vw, 64vh);
+    }
+
+    .grey__title__extra {
+        transform: translate(-4.8vw, 48.5vh);
+    }
+
+    .pink__circle__two {
+        transform: translate(29vw, 57vh);
+    }
+
+    .candy__two {
+        transform: translate(38vw, 55.5vh) rotate(-50deg);
+    }
+
+    .grey__circle__three {
+        transform: translate(63.5vw, 65vh);
     }
 
 
