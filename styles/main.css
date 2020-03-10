@@ -30,7 +30,6 @@ a {
 
 h1,
 h2 {
-    font-family: 'Source Code Pro', sans-serif;
     line-height: 100%;
     text-transform: uppercase;
     position: absolute;
@@ -82,6 +81,7 @@ h2 {
  text-decoration: underline;
 }
 
+
 .header__inf__arrow {
     margin-right: 3px;
 }
@@ -92,22 +92,23 @@ h2 {
 
 .header__inf__block {
     position: relative;
+    text-align: end;
 }
 
 .header__inf__hover {
-    width: 125px;
+    width: 400px;
     position: absolute;
     right: 0%;
 }
 
-.header__inf__block {
-    text-align: end;
+.header__inf__img {
+    width: 3vw;
 }
 
 .header__inf__quest {
     color: var(--blue);
     font-family: 'Fugue', sans-serif;
-    font-size: 24px;
+    font-size: 2vw;
     font-weight: bold;
     position: absolute;
     top: 0.7vw;
@@ -124,6 +125,7 @@ h2 {
 
 .header__inf__hover__text {
     color: var(--blue);
+    font-size: 1vw;
 }
 
 
@@ -179,8 +181,8 @@ h2 {
 }
 
 .bable__img {
-    width: 16vw;
-    height: 12.5vw;
+    width: 17vw;
+    height: 11.5vw;
 }
 
 .bable__img path {
@@ -188,6 +190,7 @@ h2 {
 }
 
 .candy {
+    z-index: 1;
     transform: translate(-0.5vw, 7vh);
 }
 
@@ -201,12 +204,22 @@ h2 {
 }
 
 .pink__oval {
-    transform: translate(15.5vw, 10vh);
+    transform: translate(12.5vw, 10vh);
+}
+
+.pink__oval svg {
+    width: 15vw;
+    height: 12vw;
 }
 
 .pink__title svg {
     width: 28vw;
     height: 10vw;
+}
+
+.pink__oval__img {
+    width: 14vw;
+    height: 13vw;
 }
 
 .pink__oval svg ellipse {
@@ -240,19 +253,19 @@ h2 {
 .blue__rect {
     width: 2.3vw;
     height: 9.7vw;
-    transform: translate(58vw, 10vh) rotate(-63.49deg);
+    transform: translate(58vw, 9vh) rotate(-63.49deg);
 }
 
 .grey__circle {
-    transform: translate(63vw, 17vh);
+    transform: translate(64vw, 15vh);
     width: 10vw;
     height: 10vw;
 }
 
 .pink__circle {
-    transform: translate(5.5vw, 32.5vh);
+    transform: translate(5.5vw, 35.5vh);
     width: 8.5vw;
-    height: 8.5vw;
+    height: 6vw;
 }
 
 .grey__circle__two {
@@ -262,13 +275,14 @@ h2 {
 }
 
 .rounded {
-    transform: translate(30vw, 30vh);
+    transform: translate(30vw, 31vh);
 }
 
 .rounded__img {
-    width: 8.5vw;
-    height: 8.5vw;
+    width: 7.5vw;
+    height: 7.5vw;
 }
+
 .rounded__img path {
     stroke: var(--blue);
 }
@@ -349,7 +363,8 @@ h2 {
 
 .blue__adress__img {
     position: absolute;
-    top: -33%;
+    width: 9vw;
+    top: -23%;
     left: 56%;
     animation: rotate 8s linear infinite;
 }
@@ -364,15 +379,15 @@ h2 {
 }
 
 .blue__rect__three {
-    transform: translate(26vw, 57vh);
+    transform: translate(26vw, 58vh);
     width: 4.5vw;
-    height: 12.5vw;
+    height: 11.5vw;
 }
 
 .pink__circle__two {
-    transform: translate(31vw, 59vh);
+    transform: translate(31vw, 61vh);
     width: 9.5vw;
-    height: 11.5vw;
+    height: 10.5vw;
 }
 
 .candy__two {
@@ -389,22 +404,22 @@ h2 {
 }
 
 .grey__circle__three {
-    transform: translate(62vw, 62vh);
-    width: 9vw;
-    height: 9.5vw;
+    transform: translate(62vw, 63vh);
+    width: 8vw;
+    height: 8.5vw;
 }
 
 .blue__rect__four {
-    transform: translate(72vw, 52.5vh) rotate(10deg);
+    transform: translate(70vw, 54.5vh) rotate(10deg);
     width: 9vw;
-    height: 8vw;
+    height: 5vw;
     border-radius: 50%;
 }
 
 .pink__rect__two {
-    transform: translate(72.5vw, 61.5vh) rotate(-37deg);
+    transform: translate(73vw, 63vh) rotate(-37deg);
     width: 2.5vw;
-    height: 10vw;
+    height: 8vw;
 }
 
 
@@ -415,11 +430,11 @@ h2 {
 
  /*Styles for pink new circles*/ 
 .div__circle {
-    width: 125px;
-    height: 125px;
+    width: 12vw;
+    height: 12vw;
     border-radius: 50%;
     background: var(--pink);
-    border: solid 1px #ffff;
+    border: solid 0.2vw #ffff;
 }
 
 .img__new__candy {
@@ -471,7 +486,12 @@ h2 {
 }
 
 .modal__bable__img {
-    width: 42vw;
+    width: 47vw;
+    height: 21vw;
+}
+
+.modal__bable__close__img {
+    width: 1.5vw;
 }
 
 .modal__bable__content {
@@ -541,6 +561,11 @@ h2 {
 
 /*Media запросы*/
 @media (max-width: 1440px) {
+
+    .header__inf__hover {
+        width: 125px;
+    }
+
     .bable {
         transform: translate(31.5vw, -2.5vh);
     }
@@ -1345,7 +1370,7 @@ h2 {
     }
 
 
-    
+
     /*Стили для появляющихся элементов*/
 
        /*Стили для модального окна*/
