@@ -1,5 +1,4 @@
-
-let colorThemes = [
+const colorThemes = [
     {
         '--pink': '#FF9FA1',
         '--blue': '#0029FF',
@@ -12,11 +11,15 @@ let colorThemes = [
         '--pink': '#5B22FF',
         '--blue': '#10BB60',
         '--white': 'black',
+        '--red': '#5B22FF',
+        '--lightBlue': '#10BB60',
         '--font': 'Cormorant',
     },
     {
         '--pink': 'black',
         '--blue': 'black',
+        '--white': 'white',
+        '--acid-green' : '#0029FF',
         '--lightBlue': 'black',
     },
     {
@@ -28,55 +31,99 @@ let colorThemes = [
     {
         '--pink': '#C4C4C4',
         '--blue': '#C4C4C4',
+        '--acid-green' : '#C4C4C4',
         '--lightBlue' : '#C4C4C4',
         '--white': 'white',
         '--font': 'Tinos',
+    },
+    {
+        '--white': '#FF9FA1',
+        '--pink': '#C4C4C4',
     }
 ]
+
+let state = {
+    isShowingLetters: false,
+    heading: false
+}
+
+//Выбор цветовой темы
+function setTheme(themeNumber) {
+    let themeOfPage = colorThemes[themeNumber]
+    Object.entries(themeOfPage).forEach(function(theme) {
+        document.documentElement.style.setProperty(theme[0], theme[1])
+    })
+}
+
+//Отображение букв
+function toggleLettersVisibility() {
+    let bigLetters = document.querySelectorAll('.letters')
+
+    if (state.isShowingLetters) {
+        for (let i = 0; i < bigLetters.length; i++) {
+            bigLetters[i].style.visibility = 'hidden'
+        }
+        state.isShowingLetters = false
+    } else {
+        for (let i = 0; i < bigLetters.length; i++) {
+            bigLetters[i].style.visibility = 'visible'
+            bigLetters[i].style.position = 'fixed'
+            bigLetters[i].style.transform = `translate(${anime.random(0,100)}vw, ${anime.random(0,50)}vh) scale(${anime.random(1, 3)}) rotate(${ anime.random(0,360)}deg)`
+        }
+        state.isShowingLetters = true 
+    }
+    
+}
+
+function changeElemColor(heading) {
+    // if (state.heading) {
+    //     for (let i = 0; i < heading.length; i++) {
+    //         heading[i].style.color = 'black'
+    //     }
+    //     state.heading = false
+    // } else {
+    //     for (let i = 0; i < heading.length; i++) {
+    //         heading[i].style.color = 'white'
+    //     }
+    //     state.heading = true
+    // }
+    for (let i = 0; i < heading.length; i++) {
+        heading[i].style.color = 'black'
+        heading[i].style.stroke = 'var(--blue)'
+        heading[i].style.fill = 'transparent'
+    } 
+}
+
+function changeColorCssShapes(color) {
+    color.style.backgroundColor = 'transparent'
+    color.style.border = 'var(--blue) solid 0.1vw'
+    color.style.fill = 'transparent'
+    color.style.stroke = 'white'
+}
 
 
 //Черный фон
 let btnBabble = document.querySelector('#btnBable')
 btnBabble.onclick = function(e) {
-  let themeOfPage = colorThemes[1]
-  Object.entries(themeOfPage).forEach(function(theme) {
-      document.documentElement.style.setProperty(theme[0], theme[1])
-  })
-
+    setTheme(1)
+    let line = document.querySelector('.line')
+    line.style.visibility = 'visible'
 }
+
+
 //Фон с буквами
-let bigLetters = document.querySelectorAll('.letters')
 let btnCandy = document.querySelector('#btnCandy')
 btnCandy.onclick = function(e) {
-    let themeOfPage = colorThemes[2]
-    Object.entries(themeOfPage).forEach(function(theme) {
-        document.documentElement.style.setProperty(theme[0], theme[1])
-    })
-    for(let i = 0; i < bigLetters.length; i++) {
-        bigLetters[i].style.visibility = 'visible'
-        bigLetters[i].style.position = 'fixed'
-        bigLetters[i].style.transform = `translate(${anime.random(0,100)}vw, ${anime.random(0,50)}vh) scale(${anime.random(1, 3)}) rotate(${ anime.random(0,360)}deg)`
-    }
- 
+    setTheme(2)
+    toggleLettersVisibility()
 }
 
 //Фон с картинками
-let fishImg = document.querySelector('.fish')
-let fishAnim = anime({
-    targets: fishImg,
-    tranlateX: ['50%','100%'],
-    tranlateY: ['5%','50%'],
-    easing: 'linear',
-    duration: 700
-})
 let svgPhoto = document.querySelector('.pink__oval svg')
 let ellipsePhoto = document.querySelector('.pink__oval svg ellipse')
 let btnPhoto = document.querySelector('.pink__circle')
 btnPhoto.onclick = function (e) {
-    let themeOfPage = colorThemes[3]
-    Object.entries(themeOfPage).forEach(function(theme) {
-        document.documentElement.style.setProperty(theme[0], theme[1])
-    })
+    setTheme(3)
     document.querySelector('.img__bc').style.display = 'block'
     svgPhoto.classList.add('svg__horse')
     ellipsePhoto.style.fill = 'transparent'
@@ -84,58 +131,69 @@ btnPhoto.onclick = function (e) {
     document.querySelector('.blue__adress__square').style.backgroundColor = 'var(--lightBlue)'
     document.querySelector('.rounded__img path').style.stroke = 'var(--lightBlue)'
     document.querySelector('.candy__two__img path').style.fill = 'var(--lightBlue)'
-    // for (let i = 0; i < downCandy.lenght; i++) {
-    //     downCandy[i].style.fill = 'var(--lightBlue)'
-    // }
-    
+    document.querySelector('.fish').style.opacity = 1
 }
 
-// document.querySelector('body').onclick = function(e) {
-//     svgPhoto.classList.remove('svg__horse')
-//     ellipsePhoto.style.fill = '#ff9fa1'
-// }
+let fishAnim = anime({
+    targets: '.fish-img',
+    translateX: ['50%','-400%'],
+    translateY: ['5%','300%'],
+    rotate: ['-30', 360],
+    easing: 'linear',
+    direction: 'alternate',
+    duration: 5000,
+    autoplay: false
+})
+let fishBtn =  document.getElementById('fishBtn')
+fishBtn.onclick = fishAnim.play
+
 
 
 //Красный фон 
 let btnRedSquare = document.querySelector('.pink__rect')
 btnRedSquare.onclick = function (e) {
-    let themeOfPage = colorThemes[4]
-    Object.entries(themeOfPage).forEach(function(theme) {
-        document.documentElement.style.setProperty(theme[0], theme[1])
-    })
-    let headings = document.querySelectorAll('h1')
-    for (let i = 0; i < headings.length; i++) {
-        headings[i].style.color = 'black'
-    }
+    setTheme(4)
+    let headingsFirst = document.querySelectorAll('h1')
+    changeElemColor(headingsFirst)
+
     let headingsSecond = document.querySelectorAll('h2')
-    for (let i = 0; i < headingsSecond.length; i++) {
-        headingsSecond[i].style.color = 'black'
-    }
+    changeElemColor(headingsSecond)
+
     document.querySelector('.squares').style.opacity = 1
 }
 
-//сброс стилей (пока реализован так)
+
+//Фон с контурным фигурами и морфингом
+let btnMorf = document.querySelector('.blue__rect__three')
+btnMorf.onclick = function (e) {
+    setTheme(5) 
+    let path = document.querySelectorAll('.path__morf')
+    changeElemColor(path)
+    let rectOne = document.querySelector('.blue__rect')
+    changeColorCssShapes(rectOne )
+    let rectTwo = document.querySelector('.blue__rect__two')
+    changeColorCssShapes(rectTwo)
+    let rectThr = document.querySelector('.blue__adress__square')
+    changeColorCssShapes(rectThr)
+    let rectFou = document.querySelector('.blue__rect__four')
+    changeColorCssShapes(rectFou)
+    let rectFifth = document.querySelector('.blue__rect__three')
+    changeColorCssShapes(rectFifth)
+    let rounded = document.querySelector('.rounded__img path')
+    rounded.style.strokeWidth = 1.5
+
+    let ellipseOne = document.querySelector('.pink__title__oval svg ellipse')
+    changeColorCssShapes(ellipseOne)
+    let morfAnime = anime ({
+        
+    })
+
+}
+
+//сброс стилей 
 let btnReset = document.querySelector('.header__logo__link')
 btnReset.onclick = function(e) {
-  let themeOfPage = colorThemes[0]
-  Object.entries(themeOfPage).forEach(function(theme) {
-      document.documentElement.style.setProperty(theme[0], theme[1])
-  })
-  for(let i = 0; i < bigLetters.length; i++) {
-    bigLetters[i].style.visibility = 'hidden'
-    }
-  document.querySelector('.blue__rect').style.backgroundColor = 'var(--blue)'
-  ellipsePhoto.style.fill = 'var(--pink)'
-  svgPhoto.classList.remove('svg__horse')
-  document.querySelector('.img__bc').style.display = 'none'
-  let headings = document.querySelectorAll('h1')
-  for (let i = 0; i < headings.length; i++) {
-      headings[i].style.color = 'white'
-  }
-  let headingsSecond = document.querySelectorAll('h2')
-  for (let i = 0; i < headingsSecond.length; i++) {
-      headingsSecond[i].style.color = 'white'
-  }
+    window.location.reload(false); 
 }
 
 
@@ -191,7 +249,7 @@ btnCreatCirc.onclick = function() {
         imgCandy.style.transform = `translate(${anime.random(0,90)}vw, ${anime.random(0,100)}vh)`
         document.body.append(imgCandy)
 
-        imgCandy.addEventListener('mouseout', function() {
+        imgCandy.addEventListener('mouseenter', function() {
             imgCandy.style.display = 'none';
           
     });

@@ -5,8 +5,10 @@
     --pink: #FF9FA1;
     --blue: #0029FF;
     --grey: #C4C4C4;
+    --acid-green: #00FF94;
     --white: #ffffff;
     --lightBlue: #5dcdbe;
+    --red: #EC2A2A;
     --font: 'Source Code Pro',sans-serif;
     --horse-img: url(../img/horse.png);
 }
@@ -57,6 +59,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 0px 25px;
+    z-index: 2;
 }
 
 .header__logo__link,
@@ -439,6 +442,7 @@ h2 {
     border-radius: 50%;
     background: var(--pink);
     border: solid 0.2vw #ffff;
+    z-index: 2;
 }
 
 .img__new__candy {
@@ -457,6 +461,7 @@ h2 {
     right: 0;
     visibility: hidden;
     transition: all .5ms linear;
+    z-index: 1;
 }
 
 .modal-animation-open{
@@ -534,18 +539,21 @@ h2 {
     font-weight: bold;
 }
 
+
 /*Появляющиеся буквы*/
 .letters {
    visibility: hidden;
    position: absolute;
 }
 
+
 /*появляющиеся картинки*/
 .svg__horse {
- background-image: var(--horse-img);
- background-repeat: no-repeat;
+    background-image: var(--horse-img);
+    background-repeat: no-repeat;
+    background-size: 12vw 15vw;
+    transition: all 1.5s linear;
 }
-
 
 .img__bc {
     width: 8vw;
@@ -556,18 +564,22 @@ h2 {
     display: none;
 }
 
+
 /*рыбы анимация*/
 .fish {
     position: fixed;
+    opacity: 0;
     right: 0;
     top: 0;
-    transform: translate(50%, 5%) rotate(-30deg);
 }
 
 .fish-img {
     width: 24.5vw;
+    transform: translate(50%, 5%) rotate(-30deg);
 }
 
+
+/*Квадраты для красного фона*/
 .squares {
     position: absolute;
     top: 0;
@@ -578,25 +590,109 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-between;
     overflow: hidden;
-    /* visibility: hidden; */
     opacity: 0;
     transition: all 1.5s ease;
     transition-delay: 0.5s;
     transition-duration: 2s;
 }
 
-
 .squares__line {
     display: flex;
+}
+
+/* .squares__line:first-child,
+.squares__line:nth-child(2),
+.squares__line:nth-child(3) {
+    animation: squareTranslate 15s linear infinite;
+} */
+
+.squares__line .squares__line__item:first-child,
+.squares__line .squares__line__item:nth-child(2),
+.squares__line .squares__line__item:nth-child(3) {
+    animation: squareTranslateRight 5s ease-in-out alternate infinite;
+    animation-delay: 3s;
+}
+
+@keyframes squareTranslateRight {
+    0% {
+        transform: translateX(0%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%)  rotate(360deg);
+    }
+}
+
+.squares__line .squares__line__item:nth-child(4) {
+    animation: squareRoate 5s ease-in-out alternate infinite;
+    animation-delay: 3s;
+}
+
+@keyframes squareRoate  {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.squares__line .squares__line__item:last-child,
+.squares__line .squares__line__item:nth-child(5),
+.squares__line .squares__line__item:nth-child(6) {
+    animation: squareTranslateLeft 5s ease-in-out alternate infinite;
+    animation-delay: 3s;
+}
+
+@keyframes squareTranslateLeft {
+    0% {
+        transform: translateX(0%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(-100%)  rotate(360deg);
+    }
 }
 
 .squares__line__item {
     width: 10vw;
     height: 10vw;
-    background-color: #EC2A2A;
+    background-color: var(--red);
     transform: rotate(45deg);
     margin: 2.15vw;
+    /* animation: redRotate 15s linear infinite; */
 }
+
+/* @keyframes redRotate {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+
+/*Линии при черном экране*/
+.line {
+    position: fixed;
+    z-index: -1;
+    visibility: hidden;
+}
+
+.line path {
+    stroke: var(--acid-green);
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear alternate infinite;
+  }
+  
+  @keyframes dash {
+    from {
+        stroke-dashoffset: 889;
+      }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 
 
 
