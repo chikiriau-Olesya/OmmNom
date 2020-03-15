@@ -85,11 +85,6 @@ h2 {
  text-decoration: underline;
 }
 
-
-.header__inf__arrow {
-    margin-right: 3px;
-}
-
 .header__inf {
     margin: 2vw 1vw;
 }
@@ -116,7 +111,27 @@ h2 {
     font-weight: bold;
     position: absolute;
     top: 0.7vw;
-    right: 0.9vw
+    right: 0.9vw;
+    animation: jump 2s linear;
+    animation-iteration-count: 7;
+}
+
+@keyframes jump {
+    0% {
+        top: 0.7vw; 
+    }
+    25% {
+        top: 0.2vw; 
+    }
+    50% {
+        top: 1.1vw; 
+    }
+    75% {
+        top: 0.2vw; 
+    }
+    100% {
+        top: 0.7vw; 
+    }
 }
 
 .header__inf__hover {
@@ -184,6 +199,11 @@ h2 {
     transform: translate(31.5vw, -2.5vh);
 }
 
+.bable:hover {
+    transform: translate(31.5vw, -2.5vh) scale(1.05);
+    transition: all 0.5s ease;
+}
+
 .bable__img {
     width: 17vw;
     height: 11.5vw;
@@ -198,6 +218,11 @@ h2 {
     transform: translate(-0.5vw, 7vh);
 }
 
+.candy:hover {
+    transform: translate(-0.5vw, 7vh) scale(1.05);
+    transition: all 0.5s ease;
+}
+
 .blue__candy__img {
     width: 22.5vw;
     height: 22.5vw;
@@ -208,12 +233,12 @@ h2 {
 }
 
 .pink__oval {
-    transform: translate(12.5vw, 10vh);
+    transform: translate(14.5vw, 7vh);
 }
 
 .pink__oval svg {
-    width: 15vw;
-    height: 12vw;
+    width: 11vw;
+    height: 14vw;
 }
 
 .pink__title svg {
@@ -273,6 +298,11 @@ h2 {
     z-index: 1;
 }
 
+.pink__circle:hover {
+    transform: translate(5.5vw, 35.5vh) scale(1.05);
+    transition: all 0.5s ease;
+}
+
 .grey__circle__two {
     transform: translate(21vw, 29.5vh);
     width: 9vw;
@@ -310,6 +340,11 @@ h2 {
     transform: translate(67vw, 33vh);
     width: 9vw;
     height: 10.5vw;
+}
+
+.pink__rect:hover {
+    transform:  translate(67vw, 33vh) scale(1.05);
+    transition: all 0.5s ease;
 }
 
 .blue__rect__two {
@@ -389,6 +424,11 @@ h2 {
     height: 11.5vw;
 }
 
+.blue__rect__three:hover {
+    transform: translate(26vw, 58vh) scale(1.05);
+    transition: all 0.5s ease;
+}
+
 .pink__circle__two {
     transform: translate(31vw, 61vh);
     width: 9.5vw;
@@ -401,10 +441,16 @@ h2 {
     transform: translate(39.5vw, 53vh) rotate(-5deg);
 }
 
+.candy__two :hover {
+    transform:  scale(1.05);
+    transition: all 0.5s ease;
+}
+
 .candy__two__img {
     width: 33vw;
     height: 13vw;
 }
+
 
 .candy__two__img path {
     fill: var(--blue);
@@ -446,12 +492,13 @@ h2 {
 }
 
 .img__new__candy {
-    width: 115px;
-    height: 115px;
+    width: 10vw;
+    height: 10vw;
     border-radius: 100%;
     border: transparent;
     background-image: url(../img/new_candy.png);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
   /*Стили для модально окна со скидкой*/
@@ -551,7 +598,7 @@ h2 {
 .svg__horse {
     background-image: var(--horse-img);
     background-repeat: no-repeat;
-    background-size: 12vw 15vw;
+    background-size: cover;
     transition: all 1.5s linear;
 }
 
@@ -570,7 +617,7 @@ h2 {
     position: fixed;
     opacity: 0;
     right: 0;
-    top: 0;
+    top: 10%;
 }
 
 .fish-img {
@@ -676,6 +723,8 @@ h2 {
     position: fixed;
     z-index: -1;
     visibility: hidden;
+    width: 55vw;
+    height: 123vh
 }
 
 .line path {

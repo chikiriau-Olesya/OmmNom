@@ -27,6 +27,7 @@ const colorThemes = [
         '--blue': '#8B5AF6',
         '--white': 'white',
         '--lightBlue' : '#5dcdbe',
+        '--acid-green': '#5dcdbe',
     },
     {
         '--pink': '#C4C4C4',
