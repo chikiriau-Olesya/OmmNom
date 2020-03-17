@@ -18,6 +18,7 @@ const colorThemes = [
     {
         '--pink': 'black',
         '--blue': 'black',
+        'black': '--white',
         '--white': 'white',
         '--acid-green' : '#0029FF',
         '--lightBlue': 'black',
@@ -76,18 +77,8 @@ function toggleLettersVisibility() {
     
 }
 
+//Функция для перебора массива одинаковых css классов
 function changeElemColor(heading) {
-    // if (state.heading) {
-    //     for (let i = 0; i < heading.length; i++) {
-    //         heading[i].style.color = 'black'
-    //     }
-    //     state.heading = false
-    // } else {
-    //     for (let i = 0; i < heading.length; i++) {
-    //         heading[i].style.color = 'white'
-    //     }
-    //     state.heading = true
-    // }
     for (let i = 0; i < heading.length; i++) {
         heading[i].style.color = 'black'
         heading[i].style.stroke = 'var(--blue)'
@@ -95,6 +86,7 @@ function changeElemColor(heading) {
     } 
 }
 
+//Функция для придания одних стилей для разных фигур (для псевдоморфинга)
 function changeColorCssShapes(color) {
     color.style.backgroundColor = 'transparent'
     color.style.border = 'var(--blue) solid 0.1vw'
@@ -164,7 +156,7 @@ btnRedSquare.onclick = function (e) {
 }
 
 
-//Фон с контурным фигурами и морфингом
+//Фон с контурным фигурами и аля-морфингом
 let btnMorf = document.querySelector('.blue__rect__three')
 btnMorf.onclick = function (e) {
     setTheme(5) 
@@ -184,10 +176,18 @@ btnMorf.onclick = function (e) {
     rounded.style.strokeWidth = 1.5
 
     let ellipseOne = document.querySelector('.pink__title__oval svg ellipse')
-    changeColorCssShapes(ellipseOne)
-    let morfAnime = anime ({
-        
-    })
+    ellipseOne.style.display = 'none'
+    document.querySelector('.pink__oval').classList.add('pink__oval__morphing')
+
+    let ellipseSec = document.querySelector('.pink__oval svg ellipse')
+    ellipseSec.style.display = 'none'
+    document.querySelector('.pink__title__oval').classList.add('pink__title__oval__morfing')
+
+
+    let rectSix = document.querySelector('.pink__rect')
+    changeColorCssShapes(rectSix)
+    rectSix.style.border = 'white solid 0.1vw'
+    rectSix.classList.add('pink__rect__morfing')
 
 }
 

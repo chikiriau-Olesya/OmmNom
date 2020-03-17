@@ -150,7 +150,7 @@ h2 {
 
 /*Стили для блока с графическими элементами*/
 
-  /* Обощаю неоторые обзщие стили у элементов*/
+  /* Обощаю некоторые общие стили у элементов*/
 
 .wrapper > div {
     position: fixed;
@@ -647,12 +647,6 @@ h2 {
     display: flex;
 }
 
-/* .squares__line:first-child,
-.squares__line:nth-child(2),
-.squares__line:nth-child(3) {
-    animation: squareTranslate 15s linear infinite;
-} */
-
 .squares__line .squares__line__item:first-child,
 .squares__line .squares__line__item:nth-child(2),
 .squares__line .squares__line__item:nth-child(3) {
@@ -705,18 +699,7 @@ h2 {
     background-color: var(--red);
     transform: rotate(45deg);
     margin: 2.15vw;
-    /* animation: redRotate 15s linear infinite; */
 }
-
-/* @keyframes redRotate {
-    0% {
-        transform: rotate(45deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} */
-
 
 /*Линии при черном экране*/
 .line {
@@ -745,6 +728,117 @@ h2 {
 
 
 
+/* Mofing */
+.pink__oval__morphing {
+    border-radius: 50%;
+    border: white solid 0.1vw;
+    width: 12vw;
+    height: 15vw;
+    animation: morphingOvalFirst 2s ease infinite;
+}
+.pink__oval__morphing:before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: white solid 0.1vw;
+    width: 12vw;
+    height: 15vw;
+    animation: morphingOvalFirst 2s ease infinite;
+    animation-delay: .1s;
+}
+
+@keyframes morphingOvalFirst {
+  0% {
+    border-radius: 50%;  
+    width: 12vw;
+    height: 15vw;
+  }
+  50% {
+    border-radius: 0%;  
+    width: 9vw;
+    height: 14vw;
+  }
+  100% {
+    border-radius: 50%;  
+    width: 12vw;
+    height: 15vw; 
+  }
+}
+
+.pink__title__oval__morfing {
+    width: 28vw;
+    height: 10vw;
+    border-radius: 50%;
+    border: white solid 0.1vw;
+    animation:  morphingOvalSecond 2.1s ease infinite;
+    animation-delay: 1s;
+}
+
+.pink__title__oval__morfing:before {
+    content: '';
+    position: absolute;
+    width: 28vw;
+    height: 10vw;
+    border-radius: 0%;
+    border: white solid 0.1vw;
+    animation:  morphingOvalSecond 2.1s ease infinite;
+    animation-delay: 1.1s;
+}
+
+@keyframes morphingOvalSecond {
+    0% {
+      border-radius: 50%;  
+      width: 28vw;
+      height: 10vw;
+    }
+    50% {
+      border-radius: 0%;  
+      width: 28vw;
+      height: 7vw;
+    }
+    100% {
+      border-radius: 50%;  
+      width: 28vw;
+      height: 10vw; 
+    }
+  }
+
+.pink__rect__morfing {
+    border-radius: 0%;  
+    width: 9vw;
+    height: 10.5vw;
+    animation: morphingRect 2.5s ease infinite;
+    animation-delay: 0.7s;
+}
+
+.pink__rect__morfing:before {
+    content: '';
+    position: absolute;
+    width: 9vw;
+    height: 10.5vw;
+    border-radius: 0%;
+    border: white solid 0.1vw;
+    animation: morphingRect 2.5s ease infinite;
+    animation-delay: 0.7s;
+}
+
+@keyframes morphingRect {
+    0% {
+        border-radius: 0%;  
+        width: 9vw;
+        height: 10.5vw;
+    }
+    50% {
+        border-radius: 50%;  
+        width: 9vw;
+        height: 12vw;
+    }
+    100% {
+        border-radius: 0%;  
+        width: 9vw;
+        height: 10.5vw;
+    }
+}
 
 
 
@@ -901,6 +995,14 @@ h2 {
         width: 27vw;
         height: 9.5vw;
     }
+
+    /* mofing */
+
+    .pink__oval__morphing {
+        transform: translate(14vw, 4vh);
+        width: 27vw;
+        height: 9.5vw;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -959,7 +1061,7 @@ h2 {
         transform: translate(36.5vw, 13.5vh) matrix(1, 0.03, -0.04, 1, 0, 0);
     }
 
-    .pink__title svg {
+    .pink__title svg{
         width: 30vw;
     }
 
@@ -1147,6 +1249,11 @@ h2 {
 
     .modal__bable__content__text {
         font-size: 1.8vw;
+    }
+
+    /* mofing */
+    .pink__title__oval__morfing  {
+        width: 30vw;
     }
 }
 
@@ -1377,6 +1484,143 @@ h2 {
     .modal__bable__content__title {
         font-size: 3.2vw;
     }
+
+
+
+    /* mofing */
+
+    .pink__oval__morphing {
+        border-radius: 50%;
+        border: white solid 0.1vw;
+        width: 21vw;
+        height: 24vw;
+        animation: morphingOvalFirst 2s ease infinite;
+    }
+
+    .pink__oval__morphing:before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        border: white solid 0.1vw;
+        width: 21vw;
+        height: 24vw;
+        animation: morphingOvalFirst 2s ease infinite;
+        animation-delay: .1s;
+    }
+    
+    @keyframes morphingOvalFirst {
+      0% {
+        border-radius: 50%;  
+        width: 21vw;
+        height: 24vw;
+      }
+      50% {
+        border-radius: 0%;  
+        width: 18vw;
+        height: 23vw;
+      }
+      100% {
+        border-radius: 50%;  
+        width: 21vw;
+        height: 24vw;
+      }
+    }
+
+    .pink__title__oval__morfing {
+        width: 47vw;
+        height: 17vw;
+        animation: morphingOvalSec 2s ease infinite;
+    }
+
+    .pink__title__oval__morfing:before {
+        content: '';
+        position: absolute;
+        width: 47vw;
+        height: 17vw;
+        border-radius: 0%;
+        border: white solid 0.1vw;
+        animation: morphingOvalSec 2.1s ease infinite;
+        animation-delay: 1.1s;
+    }
+
+    @keyframes morphingOvalSec {
+        0% {
+          border-radius: 50%;  
+          width: 47vw;
+          height: 17vw;
+        }
+        50% {
+          border-radius: 0%;  
+          width: 44vw;
+          height: 16vw;
+        }
+        100% {
+          border-radius: 50%;  
+          width: 47vw;
+          height: 17vw;
+        }
+      }
+    
+    .pink__rect__morfing {
+        border-radius: 0%;  
+        width: 9vw;
+        height: 10.5vw;
+        animation: morphingRect 2.5s ease infinite;
+        animation-delay: 0.7s;
+    }
+    
+    .pink__rect__morfing:before {
+        content: '';
+        position: absolute;
+        width: 9vw;
+        height: 10.5vw;
+        border-radius: 0%;
+        border: white solid 0.1vw;
+        animation: morphingRect 2.5s ease infinite;
+        animation-delay: 0.7s;
+    }
+    
+    @keyframes morphingRect {
+        0% {
+            border-radius: 0%;  
+            width: 9vw;
+            height: 10.5vw;
+        }
+        50% {
+            border-radius: 50%;  
+            width: 9vw;
+            height: 12vw;
+        }
+        100% {
+            border-radius: 0%;  
+            width: 9vw;
+            height: 10.5vw;
+        }
+    }
+
+
+    /* squares */
+
+    .squares__line .squares__line__item:first-child,
+    .squares__line .squares__line__item:nth-child(2),
+    .squares__line .squares__line__item:nth-child(3),
+    .squares__line .squares__line__item:nth-child(4),
+    .squares__line .squares__line__item:last-child,
+    .squares__line .squares__line__item:nth-child(5),
+    .squares__line .squares__line__item:nth-child(6) {
+        animation:  squareRotate  5s ease-in-out alternate infinite;
+        animation-delay: 3s;
+    }
+    
+    @keyframes squareRotate  {
+        0% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
 }
 
 @media (max-width: 414px) {
@@ -1628,6 +1872,91 @@ h2 {
         margin-top: 10%;
     }
 
+
+    /* mofing */ 
+
+    .pink__title__oval__morfing {
+        width: 56vw;
+        height: 17vw;
+        animation: morphingOvalSec 2s ease infinite;
+        border: white solid .3vw;
+    }
+
+    .pink__title__oval__morfing:before {
+        content: '';
+        position: absolute;
+        width: 56vw;
+        height: 17vw;
+        border-radius: 0%;
+        border: white solid .3vw;
+        animation: morphingOvalSec 2.1s ease infinite;
+        animation-delay: 1.1s;
+    }
+
+    @keyframes morphingOvalSec {
+        0% {
+          border-radius: 50%;  
+          width: 56vw;
+          height: 17vw;
+        }
+        50% {
+          border-radius: 0%;  
+          width: 53vw;
+          height: 16vw;
+        }
+        100% {
+          border-radius: 50%;  
+          width: 56vw;
+          height: 17vw;
+        }
+      }
+    
+    .pink__rect__morfing {
+        border-radius: 0%;  
+        width: 9vw;
+        height: 22vw;
+        animation: morphingRect 2.5s ease infinite;
+        animation-delay: 0.7s;
+        border: white solid .3vw;
+    }
+    
+    .pink__rect__morfing:before {
+        content: '';
+        position: absolute;
+        width: 9vw;
+        height: 22vw;
+        border-radius: 0%;
+        border: white solid .3vw;
+        animation: morphingRect 2.5s ease infinite;
+        animation-delay: 0.7s;
+    }
+    
+    @keyframes morphingRect {
+        0% {
+            border-radius: 0%;  
+            width: 9vw;
+            height: 22vw;
+        }
+        50% {
+            border-radius: 50%;  
+            width: 9vw;
+            height: 24vw;
+        }
+        100% {
+            border-radius: 0%;  
+            width: 9vw;
+            height: 22vw;
+        }
+    }
+
+    /* squere */
+
+    .squares__line__item {
+        width: 21vw;
+        height: 21vw;
+    }
+
+
 }
 
 @media (max-width: 360px) {
@@ -1805,18 +2134,17 @@ h2 {
         margin-top: 10%;
     }
 
-
-
-
-
-
-
-
+    /* morfing */
+    .pink__title__oval__morfing {
+        width: 56vw;
+        height: 23vw;
+    }
 
 
 }
 
 @media (max-width: 320px) {
+
     h1 {
         font-size: 6vw;
     }
@@ -1894,6 +2222,12 @@ h2 {
 
     .grey__circle__three {
         transform: translate(63.5vw, 65vh);
+    }
+
+    /* morfing */
+    .pink__title__oval__morfing {
+        width: 58vw;
+        height: 23vw;
     }
 
 
