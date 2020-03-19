@@ -81,10 +81,6 @@ h2 {
     font-family: 'Fugue', sans-serif;
 }
 
-.header__inf__link:hover {
- text-decoration: underline;
-}
-
 .header__inf {
     margin: 2vw 1vw;
 }
@@ -218,8 +214,9 @@ h2 {
     transform: translate(-0.5vw, 7vh);
 }
 
-.candy:hover {
-    transform: translate(-0.5vw, 7vh) scale(1.05);
+
+.candy__special:hover {
+    box-shadow: 0px 4px 12px #939393;
     transition: all 0.5s ease;
 }
 
@@ -228,9 +225,20 @@ h2 {
     height: 22.5vw;
 }
 
+/* .blue__candy__img:hover  {
+    opacity: 0.8;
+} */
+
+/* .blue__candy__img:hover {
+    box-shadow: 0px 4px 12px #939393;
+    transition: all 0.5s ease;
+} */
+
+
 .blue__candy__img path {
     fill: var(--blue);
 }
+
 
 .pink__oval {
     transform: translate(14.5vw, 7vh);
@@ -299,7 +307,8 @@ h2 {
 }
 
 .pink__circle:hover {
-    transform: translate(5.5vw, 35.5vh) scale(1.05);
+    /* transform: translate(5.5vw, 35.5vh) scale(1.05); */
+    box-shadow: 0px 3px 8px rgba(147, 147, 147, 0.8);
     transition: all 0.5s ease;
 }
 
@@ -343,7 +352,7 @@ h2 {
 }
 
 .pink__rect:hover {
-    transform:  translate(67vw, 33vh) scale(1.05);
+    box-shadow: 0px 3px 8px rgba(147, 147, 147, 0.8);
     transition: all 0.5s ease;
 }
 
@@ -425,7 +434,7 @@ h2 {
 }
 
 .blue__rect__three:hover {
-    transform: translate(26vw, 58vh) scale(1.05);
+    box-shadow: 0px 3px 8px rgba(147, 147, 147, 0.8);
     transition: all 0.5s ease;
 }
 
@@ -839,6 +848,51 @@ h2 {
         height: 10.5vw;
     }
 }
+
+/* Прямоугольники для полосатого фона */
+.rect {
+    position: fixed;
+    overflow: hidden;
+    z-index: -1;
+    justify-content: space-between;
+    top: -27%;
+    left: -50%;
+    transform: rotate(-45deg);
+    visibility: hidden;
+    transition: all .5s ease;
+}
+
+.rect__item {
+    width: 200vw;
+    height: 13vw;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.rect__item:nth-child(even) {
+    background-color: white;
+} 
+
+.rect__item:nth-child(odd) {
+    background-color: #01D358;
+}
+
+.rect__item:nth-child(odd):hover {
+    background-color: white;
+} 
+.rect__item:nth-child(odd):hover .rect__item__phrasse {
+    display: block;
+} 
+
+.rect__item__phrasse {
+    font-family: 'Fugue', sans-serif;
+    font-size: 2.6vw;
+    text-transform: uppercase;
+    color: #01D358;
+    display: none;
+}
+
+
 
 
 

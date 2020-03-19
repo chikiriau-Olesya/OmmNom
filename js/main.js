@@ -41,6 +41,9 @@ const colorThemes = [
     {
         '--white': '#FF9FA1',
         '--pink': '#C4C4C4',
+    },
+    {
+        '--blue': '#FF2D64'
     }
 ]
 
@@ -191,6 +194,15 @@ btnMorf.onclick = function (e) {
 
 }
 
+//Полосатый фон
+let btnStripedBc = document.querySelector('.grey__circle__three')
+btnStripedBc.onclick = function (e) {
+    setTheme(6)
+    let rectBc = document.querySelector('.rect')
+    rectBc.style.visibility = 'visible'
+    document.querySelector('h2').style.color = '#FF356A'
+}
+
 //сброс стилей 
 let btnReset = document.querySelector('.header__logo__link')
 btnReset.onclick = function(e) {
@@ -252,23 +264,54 @@ btnCreatCirc.onclick = function() {
 
         imgCandy.addEventListener('mouseenter', function() {
             imgCandy.style.display = 'none';
-          
-    });
-    console.log(1)
-   
-
+        });
     }
-   
-
-    // if () {
-    //     let btn = document.querySelector('.candy__two')
-    //     let modal = document.querySelector('.modal')
-    //     btn.onclick = function() {
-    //         modal.style.visibility = 'hidden';
-    //     }
-
-    // }
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+// Строка из рандомных слов, появляющася при наведении (полосатая тема)
+// const  phrases = [
+//     "Звучит неплохо",
+//     "Да",
+//     "Нет",
+//     "Не сегодня"
+//   ];
+  
+// function generateRandomPhrase() {
+//     phrases[Math.floor(Math.random() * 4)];
+// }
+  
+
+
+// let rectWords = document.querySelectorAll('.rect__item')
+//     for (let i = 0; i < rectWords.length; i++) {
+//         rectWords[i].ommouseenter = () => {
+//             rectWords[i].style.backgroundColor = 'red'
+//         }
+//         rectWords[i].ommouseleave = () => {
+//             rectWords[i].style.backgroundColor = '#01D358'
+//         }
+//    }
+
+// //    el.onmouseenter  = function(){
+// //     el.style.background = palette[Math.floor(Math.random() * palette.length)]
+// //   }
+// //   el.onmouseleave = function(){
+// //     el.style.background = 'none'
+// //   }
+
+// let pinkCir = document.querySelector('.pink__circle')
+// pinkCir.onmouseenter = function () {
+//     let pinkCircAnim = anime({
+//         targets: pinkCir,
+//         scale: 2
+//     })
+// }
