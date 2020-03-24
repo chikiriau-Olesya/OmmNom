@@ -208,7 +208,7 @@ btnStripedBc.onclick = function (e) {
 }
 
 //сброс стилей 
-let btnReset = document.querySelector('.header__logo__link')
+let btnReset = document.querySelector('.header__logo__link__refresh')
 btnReset.onclick = function(e) {
     window.location.reload(false); 
 }
@@ -273,48 +273,70 @@ btnCreatCirc.onclick = function() {
 
 
 
+// Создание новых графических элементов
+
+let colorPalete = [
+   'var(--blue)',
+   'var(--pink)',
+   'var(--grey)',
+]
+let numberBorRa = [
+    '0%',
+    '50%'
+]
+let createElBtn = document.querySelector('.blue__rect__two')
+createElBtn.onclick = function() {
+
+    let newShape = document.createElement('div')
+    let size = `${anime.random(7,15)}vw`
+    newShape.style.width = size
+    newShape.style.height = size
+    newShape.style.borderRadius = numberBorRa[anime.random(0,1)]
+    newShape.style.position = 'absolute'
+    // newShape.style.transform = `translate(${anime.random(100,800)}px, ${anime.random(100,800)}px) rotate(${ anime.random(0,360)}deg)`
+    newShape.style.transform = `rotate(${ anime.random(0,360)}deg)`
+    newShape.style.backgroundColor = colorPalete[anime.random(0,2)]
+    newShape.classList.toggle('new__shape')
+
+    document.body.append(newShape)
+
+    gragAndGrop()
+
+
+
+}
+
+function gragAndGrop() {
+    var newDIv = document.querySelectorAll('.new__shape');
+
+    for (let i = 0; i < newDIv.length; i++) {
+        const element = newDIv[i];
+        element.onmousedown = function(e) { 
+            element.style.position = 'absolute';
+            moveAt(e);
+            document.body.appendChild(element);
+            element.style.zIndex = 1000; 
+
+            function moveAt(e) {
+                element.style.left = e.pageX - element.offsetWidth / 2 + 'px';
+                element.style.top = e.pageY - element.offsetHeight / 2 + 'px';
+            }
+
+            document.onmousemove = function(e) {
+                moveAt(e);
+            }
+
+            element.onmouseup = function() {
+                document.onmousemove = null;
+                element.onmouseup = null;
+            }
+        }
+    }
+}
+
+
+// 
 
 
 
 
-
-
-
-// Строка из рандомных слов, появляющася при наведении (полосатая тема)
-// const  phrases = [
-//     "Звучит неплохо",
-//     "Да",
-//     "Нет",
-//     "Не сегодня"
-//   ];
-  
-// function generateRandomPhrase() {
-//     phrases[Math.floor(Math.random() * 4)];
-// }
-  
-
-
-// let rectWords = document.querySelectorAll('.rect__item')
-//     for (let i = 0; i < rectWords.length; i++) {
-//         rectWords[i].ommouseenter = () => {
-//             rectWords[i].style.backgroundColor = 'red'
-//         }
-//         rectWords[i].ommouseleave = () => {
-//             rectWords[i].style.backgroundColor = '#01D358'
-//         }
-//    }
-
-// //    el.onmouseenter  = function(){
-// //     el.style.background = palette[Math.floor(Math.random() * palette.length)]
-// //   }
-// //   el.onmouseleave = function(){
-// //     el.style.background = 'none'
-// //   }
-
-// let pinkCir = document.querySelector('.pink__circle')
-// pinkCir.onmouseenter = function () {
-//     let pinkCircAnim = anime({
-//         targets: pinkCir,
-//         scale: 2
-//     })
-// }
