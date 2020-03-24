@@ -104,6 +104,9 @@ btnBabble.onclick = function(e) {
     setTheme(1)
     let line = document.querySelector('.line')
     line.style.visibility = 'visible'
+
+    let lineTwo = document.querySelector('.line__two')
+    lineTwo.style.visibility = 'visible'
 }
 
 
@@ -142,7 +145,6 @@ let fishAnim = anime({
 })
 let fishBtn =  document.getElementById('fishBtn')
 fishBtn.onclick = fishAnim.play
-
 
 
 //Красный фон 
@@ -301,9 +303,6 @@ createElBtn.onclick = function() {
     document.body.append(newShape)
 
     gragAndGrop()
-
-
-
 }
 
 function gragAndGrop() {

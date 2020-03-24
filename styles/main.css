@@ -213,6 +213,7 @@ h2 {
 
 .bable__img:hover {
     opacity: 0.8;
+    cursor: url(../img/cir.svg), auto;
     transition: all 0.5s ease;
 }
 
@@ -243,6 +244,8 @@ h2 {
 
 .blue__candy__img:hover  {
     opacity: 0.8;
+    cursor: url(../img/cir.svg), auto;
+    /* cursor: pointer; */
 }
 
 /* .blue__candy__img:hover {
@@ -324,6 +327,7 @@ h2 {
 
 .pink__circle:hover {
     opacity: 0.8;
+    cursor: url(../img/cir.svg), auto;
     transition: all 0.5s ease;
 }
 
@@ -368,6 +372,7 @@ h2 {
 
 .pink__rect:hover {
     opacity: 0.8;
+    cursor: url(../img/cir.svg), auto;
     transition: all 0.5s ease;
 }
 
@@ -375,6 +380,12 @@ h2 {
     transform: translate(1vw, 49vh) rotate(-26.86deg);
     width: 3vw;
     height: 9.5vw;
+}
+
+.blue__rect__two:hover {
+    opacity: 0.8;
+    cursor: url(../img/cir.svg), auto;
+    transition: all 0.5s ease;
 }
 
 .grey__title__extra {
@@ -451,6 +462,7 @@ h2 {
 
 .blue__rect__three:hover {
     opacity: 0.8;
+    cursor: url(../img/cir.svg), auto;
     transition: all 0.5s ease;
 }
 
@@ -464,6 +476,8 @@ h2 {
 
 .pink__circle__two:hover {
     opacity: 0.8;
+    cursor: url(../img/cir.svg), auto;
+    transition: all 0.5s ease;
 }
 
 .candy__two {
@@ -472,6 +486,7 @@ h2 {
 
 .candy__two:hover {
     opacity: 0.8;
+    cursor: url(../img/cir.svg), auto;
     transition: all 0.5s ease;
 }
 
@@ -492,6 +507,8 @@ h2 {
 
 .grey__circle__three:hover {
     opacity: 0.8;
+    cursor: url(../img/cir.svg), auto;
+    transition: all 0.5s ease;
 }
 
 .blue__rect__four {
@@ -741,6 +758,7 @@ h2 {
 }
 
 /*Линии при черном экране*/
+
 .line {
     position: fixed;
     z-index: -1;
@@ -749,7 +767,17 @@ h2 {
     height: 123vh
 }
 
-.line path {
+.line__two {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    visibility: hidden;
+    width: 55vw;
+}
+
+.line path,
+.line__two path {
     stroke: var(--acid-green);
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
