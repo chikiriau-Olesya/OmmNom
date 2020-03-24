@@ -252,7 +252,6 @@ btnCreatCirc.onclick = function() {
 
         divCircle.addEventListener('mouseout', function() {
             divCircle.style.display = 'none';
-            
         });
     }
     for (let i = 0; i < numberOfPictures; i++) {
