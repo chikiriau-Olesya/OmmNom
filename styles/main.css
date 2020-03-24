@@ -64,16 +64,30 @@ h2 {
 }
 
 .header__logo__link,
+.header__logo__link__refresh,
 .header__inf__link {
     color: var(--blue);
     line-height: 21px;
 }
 
-.header__logo__link {
+.header__logo__link,
+.header__logo__link__refresh {
     font-style: normal;
     font-weight: 600;
     font-size: 2.5vw;
     cursor: url(../img/cursor.svg), auto;
+}
+
+.header__logo__link__refresh {
+    display: none;
+} 
+
+.header__logo:hover .header__logo__link__refresh {
+    display: block;
+} 
+
+.header__logo:hover .header__logo__link {
+    display: none;
 }
 
 .header__inf__link {
@@ -366,6 +380,7 @@ h2 {
 .grey__title__extra {
     transform: translate(3.2vw, 44vh);
 }
+
 .grey__title__extra svg {
     width: 31vw;
     height: 9vw;
@@ -576,8 +591,11 @@ h2 {
 
 .modal__bable__content__close {
     position: absolute;
-    right: -19%;
     top: -42%;
+}
+
+.modal__bable__content__title {
+    margin-top: 4%;
 }
 
 .modal__bable__content__title,
@@ -592,9 +610,13 @@ h2 {
     font-size: 1.7vw;
 }
 
+.modal__bable__content__text span:last-child  {
+    margin-top: 2%;
+}
+
 .modal__bable__content__text {
     font-size: 1.3vw;
-    margin-top: 18%;
+    margin-top: 9%;
     display: flex;
     flex-direction: column;
 }
@@ -753,6 +775,7 @@ h2 {
     height: 15vw;
     animation: morphingOvalFirst 2s ease infinite;
 }
+
 .pink__oval__morphing:before {
     content: '';
     position: absolute;
@@ -857,6 +880,46 @@ h2 {
     }
 }
 
+.pink__circle__two__morfing {
+    width: 9.5vw;
+    height: 10.5vw;
+    background-color: transparent;
+    border: white solid 0.1vw;
+    animation: morphingDownCirc 2.5s ease infinite;
+    animation-delay: 0.3s;
+}
+
+.pink__circle__two__morfing:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9.5vw;
+    height: 10.5vw;
+    border-radius: 50%;
+    border: white solid 0.1vw;
+    animation: morphingDownCirc 2.5s ease infinite;
+    animation-delay: 0.4s;
+}
+
+@keyframes morphingDownCirc {
+    0% {
+        border-radius: 50%;  
+        width: 9.5vw;
+        height: 10.5vw;
+    }
+    50% {
+        border-radius: 0%;  
+        width: 10.5vw;
+        height: 9.5vw;
+    }
+    100% {
+        border-radius: 50%;  
+        width: 9.5vw;
+        height: 10.5vw;
+    }
+}
+
 /* Прямоугольники для полосатого фона */
 .rect {
     position: fixed;
@@ -888,6 +951,7 @@ h2 {
 .rect__item:nth-child(odd):hover {
     background-color: white;
 } 
+
 .rect__item:nth-child(odd):hover .rect__item__phrasse {
     display: block;
 } 
@@ -1293,10 +1357,10 @@ h2 {
 
     .modal__bable__content {
         left: 17%;
+        top: 10%;
     }
 
     .modal__bable__content__close {
-        right: -12%;
         top: -26%;
     }
 
@@ -1533,6 +1597,7 @@ h2 {
 
     .modal__bable__img {
         width: 66vw;
+        height: 28vw;
     }
 
     .modal__bable__content {
@@ -1540,7 +1605,11 @@ h2 {
     }
 
     .modal__bable__content__close {
-        top: -55%;
+        top: -49%;
+    }
+    
+    .modal__bable__close__img {
+        width: 2.5vw;
     }
 
     .modal__bable__content__title {
@@ -1665,6 +1734,44 @@ h2 {
             border-radius: 0%;  
             width: 9vw;
             height: 10.5vw;
+        }
+    }
+
+    .pink__circle__two__morfing {
+        width: 16.5vw;
+        height: 17.5vw;
+        background-color: transparent;
+        border: white solid 0.1vw;
+        animation: morphingDownCirc 2.5s ease infinite;
+        animation-delay: 0.3s;
+    }
+    
+    .pink__circle__two__morfing:before {
+        content: '';
+        position: absolute;
+        width: 16.5vw;
+        height: 17.5vw;
+        border-radius: 0%;
+        border: white solid 0.1vw;
+        animation: morphingDownCirc 2.5s ease infinite;
+        animation-delay: 0.4s;
+    }
+    
+    @keyframes morphingDownCirc {
+        0% {
+            border-radius: 50%;  
+            width: 16.5vw;
+            height: 17.5vw;
+        }
+        50% {
+            border-radius: 0%;  
+            width: 17.5vw;
+            height: 18.5vw;
+        }
+        100% {
+            border-radius: 50%;  
+            width: 16.5vw;
+            height: 17.5vw;
         }
     }
 
@@ -1921,7 +2028,6 @@ h2 {
 
     .modal__bable__content__close {
         top: -61%;
-        left: 0;
     }
     .modal__bable__close__img {
         width: 4.5vw;
@@ -2019,7 +2125,47 @@ h2 {
         }
     }
 
-    /* squere */
+    .pink__circle__two__morfing {
+        width: 15.5vw;
+        height: 32.5vw;
+        background-color: transparent;
+        border: white solid 0.2vw;
+        animation: morphingDownCirc 2.5s ease infinite;
+        animation-delay: 0.3s;
+    }
+    
+    .pink__circle__two__morfing:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15.5vw;
+        height: 32.5vw;
+        border-radius: 50%;
+        border: white solid 0.2vw;
+        animation: morphingDownCirc 2.5s ease infinite;
+        animation-delay: 0.4s;
+    }
+    
+    @keyframes morphingDownCirc {
+        0% {
+            border-radius: 50%;  
+            width: 15.5vw;
+            height: 32.5vw;
+        }
+        50% {
+            border-radius: 0%;  
+            width: 16.5vw;
+            height: 30.5vw;
+        }
+        100% {
+            border-radius: 50%;  
+            width: 15.5vw;
+            height: 32.5vw;
+        }
+    }
+
+    /* square */
 
     .squares__line__item {
         width: 21vw;
@@ -2187,7 +2333,6 @@ h2 {
 
     .modal__bable__content__close {
         top: -61%;
-        left: 0;
     }
     .modal__bable__close__img {
         width: 4.5vw;

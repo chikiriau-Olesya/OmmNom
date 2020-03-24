@@ -184,7 +184,11 @@ btnMorf.onclick = function (e) {
 
     let ellipseSec = document.querySelector('.pink__oval svg ellipse')
     ellipseSec.style.display = 'none'
+
     document.querySelector('.pink__title__oval').classList.add('pink__title__oval__morfing')
+
+    let circleThr = document.querySelector('.pink__circle__two')
+    circleThr.classList.add('pink__circle__two__morfing')
 
 
     let rectSix = document.querySelector('.pink__rect')
