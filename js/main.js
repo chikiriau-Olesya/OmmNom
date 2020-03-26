@@ -298,6 +298,7 @@ createElBtn.onclick = function() {
     // newShape.style.transform = `translate(${anime.random(100,800)}px, ${anime.random(100,800)}px) rotate(${ anime.random(0,360)}deg)`
     newShape.style.transform = `rotate(${ anime.random(0,360)}deg)`
     newShape.style.backgroundColor = colorPalete[anime.random(0,2)]
+    newShape.style.cursor = 'grab'
     newShape.classList.toggle('new__shape')
 
     document.body.append(newShape)
